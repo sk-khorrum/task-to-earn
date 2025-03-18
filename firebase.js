@@ -16,6 +16,10 @@ const app = firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const db = firebase.firestore();
 
+// Google Sheets API configuration
+const sheetId = "1qm13QhkAqzyVC4YgiDdd3JBkDZ6Edc-El00HW1BK50k"; // আপনার Google Sheet ID
+const apiKey = "AIzaSyBAjhPAxgevZguOiT5O04oT-T_x_tTVrRw"; // আপনার Google API Key
+
 // User sign-up function
 document.getElementById("signUpForm").addEventListener("submit", function (e) {
   e.preventDefault();
@@ -35,6 +39,9 @@ document.getElementById("signUpForm").addEventListener("submit", function (e) {
       .catch((error) => {
         console.error("Error adding user to Firestore:", error);
       });
+
+      // Google Sheets API থেকে ডেটা রিড করার ফাংশন কল
+      readSheetData(); // এই ফাংশনটি কল করবে শীটের ডেটা রিড করতে
     })
     .catch((error) => {
       console.error("Error signing up:", error);
@@ -62,8 +69,28 @@ document.getElementById("signInForm").addEventListener("submit", function (e) {
         .catch((error) => {
           console.log("Error getting document:", error);
         });
+
+      // Google Sheets API থেকে ডেটা রিড করার ফাংশন কল
+      readSheetData(); // শীটের ডেটা রিড করার জন্য ফাংশন কল হবে
     })
     .catch((error) => {
       console.error("Error signing in:", error);
     });
 });
+
+// Google Sheets API থেকে ডেটা রিড করার ফাংশন
+function readSheetData() {
+  const range = "Sheet1!A2:B10";  // শীটের রেঞ্জ (আপনি রেঞ্জটি আপনার শীট অনুযায়ী কাস্টমাইজ করতে পারেন)
+  const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}?key=${apiKey}`;
+  
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      console.log("Sheet Data:", data.values);
+      // এখানে টাস্ক প্রসেস করা যাবে
+      // আপনি ডেটার ভিত্তিতে টাস্ক ইউজারকে দেখাতে পারেন
+    })
+    .catch(error => {
+      console.error("Error reading sheet:", error);
+    });
+}
