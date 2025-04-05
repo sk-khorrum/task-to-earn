@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Designer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         /* General Reset */
         * {
@@ -13,92 +14,161 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            line-height: 1.6;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
         }
 
-        /* Header Section */
+        /* Header */
         header {
-            background: #2c3e50;
+            background-color: #34495e;
             color: white;
             padding: 50px 0;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
 
         header h1 {
             font-size: 48px;
-            letter-spacing: 2px;
+            font-weight: 500;
         }
 
-        /* Introduction Section */
-        .intro {
+        header .subtitle {
+            font-size: 22px;
+            color: #ecf0f1;
+            margin-top: 10px;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            background: url('https://via.placeholder.com/1500x900') no-repeat center center/cover;
+            position: relative;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-text {
+            color: white;
+            z-index: 1;
             text-align: center;
-            margin-top: 50px;
-            padding: 40px 20px;
+            padding: 20px;
         }
 
-        .intro h2 {
-            font-size: 30px;
-            color: #3498db;
+        .hero-text h2 {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 10px;
         }
 
-        .intro p {
+        .hero-text p {
             font-size: 18px;
-            color: #555;
-            line-height: 1.7;
-            max-width: 700px;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 20px;
+            background-color: #ecf0f1;
+            text-align: center;
+        }
+
+        .about h3 {
+            font-size: 32px;
+            font-weight: 500;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #7f8c8d;
+            max-width: 800px;
             margin: 0 auto;
         }
 
-        /* Profile Section */
-        .profile {
+        /* Skills Section */
+        .skills {
             display: flex;
-            justify-content: center;
-            margin-top: 60px;
+            justify-content: space-around;
+            padding: 80px 20px;
+            background-color: #ffffff;
         }
 
-        .profile .image-container {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin-right: 30px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        .skills .skill {
+            text-align: center;
+            width: 30%;
+            padding: 30px;
+            background-color: #3498db;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
         }
 
-        .profile .image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .skills .skill:hover {
+            transform: translateY(-10px);
         }
 
-        .profile .description {
-            max-width: 600px;
-            font-size: 18px;
-            color: #555;
+        .skills .skill h4 {
+            font-size: 24px;
+            font-weight: 500;
+            color: white;
+            margin-bottom: 10px;
         }
 
-        /* 3D Animation Section */
+        .skills .skill p {
+            font-size: 16px;
+            color: white;
+        }
+
+        /* 3D Animation */
         .animation-container {
             display: flex;
             justify-content: center;
-            margin-top: 50px;
-            padding-bottom: 50px;
+            margin-top: 60px;
+            padding-bottom: 60px;
         }
 
         .animation-container .skull {
             width: 200px;
             height: 200px;
-            background: #2ecc71;
+            background-color: #2ecc71;
             border-radius: 50%;
             position: relative;
-            animation: rotateSkull 8s infinite linear;
+            animation: skullRotate 8s infinite linear;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
         }
 
-        @keyframes rotateSkull {
+        @keyframes skullRotate {
             0% {
                 transform: rotateY(0deg);
             }
@@ -107,70 +177,49 @@
             }
         }
 
-        /* Skills Section */
-        .skills {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 60px;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        .skills div {
-            width: 30%;
-            background: white;
-            padding: 20px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-
-        .skills h3 {
-            font-size: 22px;
-            color: #3498db;
-            margin-bottom: 10px;
-        }
-
         /* Contact Section */
         .contact {
-            background: #3498db;
+            padding: 60px 20px;
+            background-color: #34495e;
             color: white;
-            padding: 50px 20px;
             text-align: center;
         }
 
         .contact h3 {
-            font-size: 28px;
+            font-size: 32px;
+            font-weight: 600;
             margin-bottom: 20px;
         }
 
         .contact p {
             font-size: 18px;
-            max-width: 600px;
-            margin: 0 auto;
-            margin-bottom: 30px;
+            line-height: 1.7;
+            margin-bottom: 40px;
         }
 
         .contact a {
             color: white;
             text-decoration: none;
-            font-size: 20px;
-            background: #2c3e50;
-            padding: 10px 20px;
-            border-radius: 5px;
+            font-size: 18px;
+            background-color: #2ecc71;
+            padding: 12px 24px;
+            border-radius: 25px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             transition: background 0.3s ease;
         }
 
         .contact a:hover {
-            background: #34495e;
+            background-color: #27ae60;
         }
 
-        /* Footer Section */
+        /* Footer */
         footer {
-            background: #2c3e50;
+            background-color: #2c3e50;
             color: white;
-            padding: 20px;
             text-align: center;
+            padding: 20px;
         }
+
     </style>
 </head>
 <body>
@@ -178,51 +227,56 @@
     <!-- Header -->
     <header>
         <h1>3D Designer Portfolio</h1>
+        <div class="subtitle">Creative. Professional. Skilled.</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Contact</a>
+        </nav>
     </header>
 
-    <!-- Introduction -->
-    <section class="intro">
-        <h2>Welcome to My Portfolio</h2>
-        <p>Hello, I'm a passionate 3D designer with years of experience in creating high-quality 3D models, animations, and visualizations for various industries. I specialize in creating immersive 3D experiences for clients across the globe. Feel free to browse through my work and learn more about my skills and projects.</p>
-    </section>
-
-    <!-- Profile -->
-    <section class="profile">
-        <div class="image-container">
-            <img src="https://via.placeholder.com/250" alt="Designer">
-        </div>
-        <div class="description">
-            <h3>About Me</h3>
-            <p>I am a professional 3D Designer with a deep passion for creating stunning and realistic 3D models and animations. My work includes 3D modeling for product visualizations, game environments, architectural renderings, and more. With expertise in various software tools like Blender, 3ds Max, and Cinema 4D, I deliver high-quality designs tailored to meet the needs of my clients.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-text">
+            <h2>Welcome to My 3D Design World</h2>
+            <p>I create stunning 3D models and animations for your creative projects</p>
         </div>
     </section>
 
-    <!-- 3D Skull Animation -->
-    <section class="animation-container">
-        <div class="skull"></div>
+    <!-- About Section -->
+    <section class="about">
+        <h3>About Me</h3>
+        <p>I am a professional 3D designer with a passion for creating engaging and realistic 3D models, animations, and visualizations. With experience in various industries, including gaming, architecture, and product design, I strive to bring your vision to life using advanced techniques and state-of-the-art tools.</p>
     </section>
 
     <!-- Skills Section -->
     <section class="skills">
-        <div>
-            <h3>3D Modeling</h3>
-            <p>Creating highly detailed and realistic 3D models for diverse industries like gaming, architecture, and product design.</p>
+        <div class="skill">
+            <h4>3D Modeling</h4>
+            <p>Creating high-quality 3D models for various applications including gaming and product design.</p>
         </div>
-        <div>
-            <h3>Animation</h3>
-            <p>Designing fluid, high-quality animations for characters, environments, and products, bringing them to life.</p>
+        <div class="skill">
+            <h4>Animation</h4>
+            <p>Designing smooth animations to bring models to life, ensuring high realism and fluidity.</p>
         </div>
-        <div>
-            <h3>Rendering</h3>
-            <p>Delivering top-quality renderings and visualizations using advanced techniques and tools like V-Ray and Arnold.</p>
+        <div class="skill">
+            <h4>Rendering</h4>
+            <p>Rendering stunning visuals using advanced techniques like photorealistic rendering for cinematic experiences.</p>
         </div>
+    </section>
+
+    <!-- 3D Animation -->
+    <section class="animation-container">
+        <div class="skull"></div>
     </section>
 
     <!-- Contact Section -->
     <section class="contact">
         <h3>Contact Me</h3>
-        <p>If you're interested in collaborating on a project, feel free to get in touch with me. I'm always open to new opportunities and creative challenges!</p>
-        <a href="mailto:your-email@example.com">Email Me</a>
+        <p>Interested in working together? Let’s discuss your project and bring your ideas to life!</p>
+        <a href="mailto:your-email@example.com">Get in Touch</a>
     </section>
 
     <!-- Footer -->
