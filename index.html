@@ -43,7 +43,8 @@
         nav {
             position: absolute;
             top: 20px;
-            right: 30px;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         nav a {
@@ -116,38 +117,46 @@
             margin: 0 auto;
         }
 
-        /* Skills Section */
-        .skills {
+        /* Projects Section */
+        .projects {
             display: flex;
             justify-content: space-around;
             padding: 80px 20px;
             background-color: #ffffff;
+            flex-wrap: wrap;
         }
 
-        .skills .skill {
+        .project {
             text-align: center;
             width: 30%;
-            padding: 30px;
+            margin-bottom: 30px;
             background-color: #3498db;
             border-radius: 10px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
         }
 
-        .skills .skill:hover {
+        .project:hover {
             transform: translateY(-10px);
         }
 
-        .skills .skill h4 {
+        .project img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .project h4 {
             font-size: 24px;
             font-weight: 500;
             color: white;
-            margin-bottom: 10px;
+            margin-top: 15px;
         }
 
-        .skills .skill p {
+        .project p {
             font-size: 16px;
             color: white;
+            padding: 10px 15px;
         }
 
         /* 3D Animation */
@@ -231,7 +240,7 @@
         <nav>
             <a href="#">Home</a>
             <a href="#">About</a>
-            <a href="#">Portfolio</a>
+            <a href="#">Projects</a>
             <a href="#">Contact</a>
         </nav>
     </header>
@@ -251,19 +260,22 @@
         <p>I am a professional 3D designer with a passion for creating engaging and realistic 3D models, animations, and visualizations. With experience in various industries, including gaming, architecture, and product design, I strive to bring your vision to life using advanced techniques and state-of-the-art tools.</p>
     </section>
 
-    <!-- Skills Section -->
-    <section class="skills">
-        <div class="skill">
-            <h4>3D Modeling</h4>
-            <p>Creating high-quality 3D models for various applications including gaming and product design.</p>
+    <!-- Projects Section -->
+    <section class="projects">
+        <div class="project">
+            <img src="https://via.placeholder.com/400x300" alt="Project 1">
+            <h4>3D Model Design</h4>
+            <p>A detailed 3D model for a fictional character, showcasing high-detail texturing and realistic rendering.</p>
         </div>
-        <div class="skill">
-            <h4>Animation</h4>
-            <p>Designing smooth animations to bring models to life, ensuring high realism and fluidity.</p>
+        <div class="project">
+            <img src="https://via.placeholder.com/400x300" alt="Project 2">
+            <h4>Architectural Visualization</h4>
+            <p>Realistic 3D architectural visualization of a modern home, with a focus on lighting and shadows.</p>
         </div>
-        <div class="skill">
-            <h4>Rendering</h4>
-            <p>Rendering stunning visuals using advanced techniques like photorealistic rendering for cinematic experiences.</p>
+        <div class="project">
+            <img src="https://via.placeholder.com/400x300" alt="Project 3">
+            <h4>Product Rendering</h4>
+            <p>High-quality 3D renderings of a consumer product, highlighting every detail and surface texture.</p>
         </div>
     </section>
 
