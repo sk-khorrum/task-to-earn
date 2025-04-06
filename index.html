@@ -1,300 +1,216 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Designer Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>The New Dreams Association</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f8f9fa;
-            color: #212529;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
         }
 
-        /* Header */
+        /* Header Section */
         header {
-            background-color: #34495e;
+            background: url('your-banner-image.jpg') no-repeat center center/cover;
             color: white;
-            padding: 50px 0;
+            padding: 60px 20px;
             text-align: center;
             position: relative;
         }
 
         header h1 {
-            font-size: 48px;
-            font-weight: 500;
+            font-size: 50px;
+            margin: 0;
+            text-transform: uppercase;
         }
 
-        header .subtitle {
-            font-size: 22px;
-            color: #ecf0f1;
-            margin-top: 10px;
+        header p {
+            font-size: 24px;
+            margin: 10px 0;
         }
 
-        /* Navigation Bar */
+        /* Navigation */
         nav {
-            position: absolute;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
+            background-color: #003366;
+            padding: 15px;
+            text-align: center;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            font-size: 16px;
-            margin: 0 15px;
-            font-weight: 500;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* Hero Section */
-        .hero {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 80vh;
-            background: url('https://via.placeholder.com/1500x900') no-repeat center center/cover;
-            position: relative;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.4);
-        }
-
-        .hero-text {
-            color: white;
-            z-index: 1;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .hero-text h2 {
-            font-size: 36px;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .hero-text p {
+            margin: 0 20px;
             font-size: 18px;
         }
 
-        /* About Section */
+        nav a:hover {
+            background-color: #005bb5;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        /* About Us Section */
         .about {
-            padding: 80px 20px;
-            background-color: #ecf0f1;
+            background-color: #ffffff;
+            padding: 50px 20px;
             text-align: center;
         }
 
-        .about h3 {
-            font-size: 32px;
-            font-weight: 500;
-            color: #2c3e50;
-            margin-bottom: 20px;
+        .about h2 {
+            font-size: 36px;
+            color: #003366;
         }
 
         .about p {
             font-size: 18px;
-            line-height: 1.6;
-            color: #7f8c8d;
-            max-width: 800px;
-            margin: 0 auto;
+            color: #555;
+            line-height: 1.8;
         }
 
-        /* Projects Section */
-        .projects {
-            display: flex;
-            justify-content: space-around;
-            padding: 80px 20px;
-            background-color: #ffffff;
-            flex-wrap: wrap;
-        }
-
-        .project {
-            text-align: center;
-            width: 30%;
-            margin-bottom: 30px;
-            background-color: #3498db;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .project:hover {
-            transform: translateY(-10px);
-        }
-
-        .project img {
-            width: 100%;
+        .about img {
+            max-width: 100%;
             height: auto;
-            border-radius: 10px;
+            margin-top: 30px;
         }
 
-        .project h4 {
-            font-size: 24px;
-            font-weight: 500;
+        /* Donation Section */
+        .donation {
+            background-color: #003366;
             color: white;
-            margin-top: 15px;
+            padding: 50px 20px;
+            text-align: center;
         }
 
-        .project p {
-            font-size: 16px;
+        .donation h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .donation .button {
+            background-color: #ff6f61;
             color: white;
-            padding: 10px 15px;
+            padding: 15px 30px;
+            font-size: 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
         }
 
-        /* 3D Animation */
-        .animation-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 60px;
-            padding-bottom: 60px;
-        }
-
-        .animation-container .skull {
-            width: 200px;
-            height: 200px;
-            background-color: #2ecc71;
-            border-radius: 50%;
-            position: relative;
-            animation: skullRotate 8s infinite linear;
-            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        @keyframes skullRotate {
-            0% {
-                transform: rotateY(0deg);
-            }
-            100% {
-                transform: rotateY(360deg);
-            }
+        .donation .button:hover {
+            background-color: #e55b50;
         }
 
         /* Contact Section */
         .contact {
-            padding: 60px 20px;
-            background-color: #34495e;
-            color: white;
+            background-color: #f9f9f9;
+            padding: 50px 20px;
             text-align: center;
         }
 
-        .contact h3 {
-            font-size: 32px;
-            font-weight: 600;
-            margin-bottom: 20px;
+        .contact h2 {
+            font-size: 36px;
+            color: #003366;
         }
 
-        .contact p {
-            font-size: 18px;
-            line-height: 1.7;
-            margin-bottom: 40px;
+        .contact form {
+            display: inline-block;
+            margin-top: 20px;
+            text-align: left;
+            max-width: 500px;
+            width: 100%;
         }
 
-        .contact a {
+        .contact form input,
+        .contact form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact form button {
+            background-color: #ff6f61;
             color: white;
-            text-decoration: none;
-            font-size: 18px;
-            background-color: #2ecc71;
-            padding: 12px 24px;
-            border-radius: 25px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background 0.3s ease;
+            padding: 15px 30px;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
 
-        .contact a:hover {
-            background-color: #27ae60;
+        .contact form button:hover {
+            background-color: #e55b50;
         }
 
         /* Footer */
         footer {
-            background-color: #2c3e50;
+            background-color: #003366;
             color: white;
-            text-align: center;
             padding: 20px;
+            text-align: center;
         }
 
+        footer p {
+            margin: 0;
+            font-size: 16px;
+        }
     </style>
 </head>
+
 <body>
 
-    <!-- Header -->
+    <!-- Header Section -->
     <header>
-        <h1>3D Designer Portfolio</h1>
-        <div class="subtitle">Creative. Professional. Skilled.</div>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Projects</a>
-            <a href="#">Contact</a>
-        </nav>
+        <h1>The New Dreams Association</h1>
+        <p>Empowering Dreams, Building Futures</p>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-text">
-            <h2>Welcome to My 3D Design World</h2>
-            <p>I create stunning 3D models and animations for your creative projects</p>
-        </div>
-    </section>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Mission</a>
+        <a href="#">Donate</a>
+        <a href="#">Contact</a>
+    </nav>
 
-    <!-- About Section -->
+    <!-- About Us Section -->
     <section class="about">
-        <h3>About Me</h3>
-        <p>I am a professional 3D designer with a passion for creating engaging and realistic 3D models, animations, and visualizations. With experience in various industries, including gaming, architecture, and product design, I strive to bring your vision to life using advanced techniques and state-of-the-art tools.</p>
+        <h2>About Us</h2>
+        <p>The New Dreams Association is a non-profit organization dedicated to making a difference in the lives of underprivileged communities. We focus on education, healthcare, and empowerment programs that give individuals the tools to succeed.</p>
+        <img src="your-image.jpg" alt="Community Work">
     </section>
 
-    <!-- Projects Section -->
-    <section class="projects">
-        <div class="project">
-            <img src="https://via.placeholder.com/400x300" alt="Project 1">
-            <h4>3D Model Design</h4>
-            <p>A detailed 3D model for a fictional character, showcasing high-detail texturing and realistic rendering.</p>
-        </div>
-        <div class="project">
-            <img src="https://via.placeholder.com/400x300" alt="Project 2">
-            <h4>Architectural Visualization</h4>
-            <p>Realistic 3D architectural visualization of a modern home, with a focus on lighting and shadows.</p>
-        </div>
-        <div class="project">
-            <img src="https://via.placeholder.com/400x300" alt="Project 3">
-            <h4>Product Rendering</h4>
-            <p>High-quality 3D renderings of a consumer product, highlighting every detail and surface texture.</p>
-        </div>
-    </section>
-
-    <!-- 3D Animation -->
-    <section class="animation-container">
-        <div class="skull"></div>
+    <!-- Donation Section -->
+    <section class="donation">
+        <h2>Make a Difference Today</h2>
+        <p>Your support can help us create lasting change. Join us in making dreams come true!</p>
+        <a href="your-donation-link.com" class="button">Donate Now</a>
     </section>
 
     <!-- Contact Section -->
     <section class="contact">
-        <h3>Contact Me</h3>
-        <p>Interested in working together? Let’s discuss your project and bring your ideas to life!</p>
-        <a href="mailto:your-email@example.com">Get in Touch</a>
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 3D Designer. All rights reserved.</p>
+        <p>&copy; 2025 The New Dreams Association | All rights reserved.</p>
+        <p>Contact: info@newdreams.org</p>
     </footer>
 
 </body>
+
 </html>
