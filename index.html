@@ -95,20 +95,54 @@
     </div>
   </section>
   <section class="expo-slider">
-    <h2>EXPOs We Work With</h2>
-    <div class="slider-track">
-      <div class="expo-item">Dhaka International Trade Fair</div>
-      <div class="expo-item">IPF Expo</div>
-      <div class="expo-item">BASIS SoftExpo</div>
-      <div class="expo-item">BAPA FoodPro</div>
-      <div class="expo-item">BATEXPO</div>
-      <div class="expo-item">REHAB Fair</div>
-      <div class="expo-item">Dhaka Fashion Expo</div>
-      <div class="expo-item">Digital World</div>
-      <div class="expo-item">Agro Bangladesh Expo</div>
-      <div class="expo-item">Bangladesh BuildCon</div>
-    </div>
-</section><section id="testimonials">
+  <h2>EXPOs We Work With</h2>
+  <div class="slider-track">
+    <div class="expo-item">Dhaka International Trade Fair</div>
+    <div class="expo-item">IPF Expo</div>
+    <div class="expo-item">BASIS SoftExpo</div>
+    <div class="expo-item">BAPA FoodPro</div>
+    <div class="expo-item">BATEXPO</div>
+    <div class="expo-item">REHAB Fair</div>
+    <div class="expo-item">Dhaka Fashion Expo</div>
+    <div class="expo-item">Digital World</div>
+    <div class="expo-item">Agro Bangladesh Expo</div>
+    <div class="expo-item">Bangladesh BuildCon</div>
+  </div>
+</section>
+
+<style>
+  .expo-slider {
+    background: #f1f1f1;
+    overflow: hidden;
+    padding: 20px 0;
+    margin-top: 40px;
+  }
+  .expo-slider h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .slider-track {
+    display: flex;
+    animation: scroll-left 25s linear infinite;
+    gap: 60px;
+    padding: 10px 0;
+  }
+  .expo-item {
+    white-space: nowrap;
+    font-size: 1.2em;
+    font-weight: bold;
+    background: #ffffff;
+    color: #1d3557;
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  @keyframes scroll-left {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+  }
+</style>
+<section id="testimonials">
     <h2>Client Reviews</h2>
     <div class="testimonial scroll-anim">
       <p>“WOOD Communication made our expo experience seamless and spectacular. Highly recommended!” – <strong>Expo Organizer, BD</strong></p>
