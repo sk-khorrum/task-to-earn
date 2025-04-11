@@ -1,207 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Exhibition Stall Designer</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WOOD Communication | Expo Stall Expert</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f4f4f4;
-    }
-    header {
-      background: #000;
-      color: #fff;
-      padding: 15px;
-      text-align: center;
-    }
-    nav {
-      background: #333;
-      display: flex;
-      justify-content: center;
-    }
-    nav a {
-      color: #fff;
-      padding: 14px 20px;
-      display: block;
-      text-decoration: none;
-    }
-    nav a:hover {
-      background: #555;
-    }
-    .container {
-      padding: 20px;
-      max-width: 1000px;
-      margin: auto;
-      background: #fff;
-    }
-    h1 {
-      color: #c40000;
-    }
-    .intro img {
-      width: 100%;
-      height: auto;
-      margin-top: 20px;
-      border-radius: 5px;
-    }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 20px;
-    }
-    .gallery img {
-      width: calc(33.33% - 10px);
-      border-radius: 5px;
-    }
-    .info {
-      margin-top: 30px;
-    }
-    .social {
-      margin-top: 30px;
-      text-align: center;
-    }
-    .social a {
-      display: inline-block;
-      margin: 0 10px;
-      font-size: 20px;
-      text-decoration: none;
-    }
-    footer {
-      background: #222;
-      color: #aaa;
-      text-align: center;
-      padding: 15px;
-      margin-top: 30px;
-    }
+    body { margin: 0; font-family: 'Roboto', sans-serif; }
+    header { background: linear-gradient(90deg, #e63946, #1d3557); color: white; padding: 60px 20px; text-align: center; }
+    header h1 { margin: 0; font-size: 3em; }
+    nav { background: #1d3557; display: flex; justify-content: center; padding: 10px 0; }
+    nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+    section { padding: 40px 20px; max-width: 1000px; margin: auto; }
+    .services, .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .card { background: #f1f1f1; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .card img { width: 100%; border-radius: 5px; }
+    .testimonial { background: #f8f9fa; padding: 30px; border-left: 5px solid #e63946; margin-bottom: 20px; }
+    footer { background: #1d3557; color: white; text-align: center; padding: 20px; }
+    form { display: flex; flex-direction: column; gap: 15px; }
+    input, textarea { padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+    button { background: #e63946; color: white; padding: 10px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; }
   </style>
 </head>
 <body>
-
   <header>
-    <h2>Event Squad 360</h2>
-    <p>Best Exhibition Stall Designer Company in Dhaka, Bangladesh</p>
+    <h1>WOOD Communication</h1>
+    <p>Professional Expo Stall & Event Setup Services</p>
   </header>
-
   <nav>
-    <a href="#">Home</a>
-    <a href="#">Services</a>
-    <a href="#">Gallery</a>
-    <a href="#">Contact</a>
-  </nav>
-  <body>
-
-<div class="slideshow-container">
-
-    <div class="slides fade">
-        <img src="https://woodcommunication.vercel.app/assets/img/Screenshot_2025_0114_154144.png" alt="Modern Fair Stall Design">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>  <section id="about">
+    <h2>About Us</h2>
+    <p>WOOD Communication is a leading company in Expo Stall setup, providing innovative, eye-catching, and professional exhibition booths tailored to your brand. With years of experience and a passionate team, we bring your vision to life.</p>
+  </section>  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Expo Stall Design</h3>
+        <p>Custom-made stall designs that grab attention and communicate your brand message.</p>
+      </div>
+      <div class="card">
+        <h3>Fabrication & Setup</h3>
+        <p>Complete on-site fabrication and installation support for any event size.</p>
+      </div>
+      <div class="card">
+        <h3>Lighting & Branding</h3>
+        <p>We provide lighting, branding and digital integration for a modern experience.</p>
+      </div>
     </div>
-
-    <div class="slides fade">
-        <img src="https://woodcommunication.vercel.app/assets/img/Screenshot_2025_0114_154144.png" alt="Affordable Fair Stall Design">
+  </section>  <section id="projects">
+    <h2>Our Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200" alt="Project 1">
+        <p>Dhaka Expo 2024 - Tech Booth</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200" alt="Project 2">
+        <p>Chittagong Fair - Fashion Pavilion</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200" alt="Project 3">
+        <p>Rajshahi Trade Show - Food Zone</p>
+      </div>
     </div>
-
-    <div class="slides fade">
-        <img src="https://woodcommunication.vercel.app/assets/img/Screenshot_2025_0114_154144.png" alt="Custom Fair Stall Setup">
+  </section>  <section id="testimonials">
+    <h2>Client Reviews</h2>
+    <div class="testimonial">
+      <p>“WOOD Communication made our expo experience seamless and spectacular. Highly recommended!” – <strong>Expo Organizer, BD</strong></p>
     </div>
-
-    <div class="slides fade">
-        <img src="https://woodcommunication.vercel.app/assets/img/Screenshot_2025_0114_154144.png" alt="Professional Fair Stall Designers">
+    <div class="testimonial">
+      <p>“Excellent design sense and timely execution. The team is very professional.” – <strong>Event Manager</strong></p>
     </div>
-
-    <!-- Next and previous buttons -->
-    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-    <a class="next" onclick="changeSlide(1)">&#10095;</a>
-
-</div>
-
-<br>
-
-<div class="dot-container">
-    <span class="dot" onclick="currentSlide(1)"></span> 
-    <span class="dot" onclick="currentSlide(2)"></span> 
-    <span class="dot" onclick="currentSlide(3)"></span> 
-    <span class="dot" onclick="currentSlide(4)"></span> 
-</div>
-
-<script>
-    let slideIndex = 0;
-    let autoSlideInterval;
-
-    function showSlides() {
-        const slides = document.getElementsByClassName("slides");
-        const dots = document.getElementsByClassName("dot");
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {slideIndex = 1}    
-        for (let i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";  
-        dots[slideIndex-1].className += " active";
-        autoSlideInterval = setTimeout(showSlides, 3000); // Change image every 3 seconds
-    }
-
-    function changeSlide(n) {
-        clearTimeout(autoSlideInterval);
-        slideIndex += n - 1;
-        showSlides();
-    }
-
-    function currentSlide(n) {
-        clearTimeout(autoSlideInterval);
-        slideIndex = n - 1;
-        showSlides();
-    }
-
-    // Initialize the slideshow
-    showSlides();
-</script>
-
-  </body>
-
-  <div class="container">
-    <section class="intro">
-      <h1>Professional Exhibition Stall Design & Fabrication</h1>
-      <p>We are a globally recognized company offering customized and innovative exhibition stall design and fabrication services. Our focus is on creativity, quality, and client satisfaction.</p>
-      <img src="https://woodcommunication.vercel.app/assets/img/logo.png" alt="Stall Design">
-    </section>
-
-    <section class="gallery">
-      <img src="https://woodcommunication.vercel.app/assets/img/Screenshot_2025_0114_154144.png" alt="">
-      <img src="https://woodcommunication.vercel.app/assets/img/Screenshot_2025_0114_154144.png" alt="">
-      <img src="https://woodcommunication.vercel.app/assets/img/Screenshot_2025_0114_154144.png" alt="">
-      <img src="https://woodcommunication.vercel.app/assets/img/Screenshot_2025_0114_154144.png" alt="">
-      <img src="https://woodcommunication.vercel.app/assets/img/Screenshot_2025_0114_154144.png" alt="">
-      <img src="https://woodcommunication.vercel.app/assets/img/Screenshot_2025_0114_154144.png" alt="">
-    </section>
-
-    <section class="info">
-      <h2>Why Choose Us?</h2>
-      <ul>
-        <li>Creative 3D Stall Design with Branding</li>
-        <li>Turnkey Fabrication & On-Site Execution</li>
-        <li>Custom Materials & Quality Finish</li>
-        <li>Client-Centric Approach</li>
-        <li>Affordable Packages</li>
-      </ul>
-    </section>
-
-    <div class="social">
-      <h3>Follow Us</h3>
-      <a href="#">Facebook</a>
-      <a href="#">YouTube</a>
-      <a href="#">Instagram</a>
-      <a href="#">WhatsApp</a>
-    </div>
-  </div>
-
-  <footer>
-    &copy; 2025 Event Squad 360. All rights reserved.
+  </section>  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>  <footer>
+    <p>&copy; 2025 WOOD Communication. All Rights Reserved.</p>
   </footer>
-
 </body>
 </html>
