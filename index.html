@@ -8,17 +8,22 @@
     body { margin: 0; font-family: 'Roboto', sans-serif; }
     header { background: linear-gradient(90deg, #e63946, #1d3557); color: white; padding: 60px 20px; text-align: center; }
     header h1 { margin: 0; font-size: 3em; }
-    nav { background: #1d3557; display: flex; justify-content: center; padding: 10px 0; }
+    nav { background: #1d3557; display: flex; justify-content: center; padding: 10px 0; position: sticky; top: 0; z-index: 1000; }
     nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
     section { padding: 40px 20px; max-width: 1000px; margin: auto; }
-    .services, .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .services, .projects-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
     .card { background: #f1f1f1; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    .card img { width: 100%; border-radius: 5px; }
+    .card img { width: 100%; border-radius: 5px; transition: transform 0.3s ease; cursor: pointer; }
+    .card img:hover { transform: scale(1.1); }
     .testimonial { background: #f8f9fa; padding: 30px; border-left: 5px solid #e63946; margin-bottom: 20px; }
     footer { background: #1d3557; color: white; text-align: center; padding: 20px; }
     form { display: flex; flex-direction: column; gap: 15px; }
     input, textarea { padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
     button { background: #e63946; color: white; padding: 10px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; }
+    .gallery img { width: 100%; border-radius: 8px; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: zoom-in; }
+    .gallery img:hover { transform: scale(1.05); box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+    .scroll-anim { opacity: 0; transform: translateY(30px); transition: all 0.6s ease-out; }
+    .scroll-anim.visible { opacity: 1; transform: translateY(0); }
   </style>
 </head>
 <body>
@@ -32,52 +37,62 @@
     <a href="#projects">Projects</a>
     <a href="#testimonials">Reviews</a>
     <a href="#contact">Contact</a>
-  </nav>  <section id="about">
+  </nav>  <section id="gallery">
+    <h2>Expo Stall Gallery</h2>
+    <div class="projects-gallery gallery">
+      <div class="card scroll-anim"><img src="https://via.placeholder.com/300x200?text=Stall+1" alt="Stall 1"></div>
+      <div class="card scroll-anim"><img src="https://via.placeholder.com/300x200?text=Stall+2" alt="Stall 2"></div>
+      <div class="card scroll-anim"><img src="https://via.placeholder.com/300x200?text=Stall+3" alt="Stall 3"></div>
+      <div class="card scroll-anim"><img src="https://via.placeholder.com/300x200?text=Stall+4" alt="Stall 4"></div>
+      <div class="card scroll-anim"><img src="https://via.placeholder.com/300x200?text=Stall+5" alt="Stall 5"></div>
+      <div class="card scroll-anim"><img src="https://via.placeholder.com/300x200?text=Stall+6" alt="Stall 6"></div>
+    </div>
+  </section>  <section id="about">
     <h2>About Us</h2>
     <p>WOOD Communication is a leading company in Expo Stall setup, providing innovative, eye-catching, and professional exhibition booths tailored to your brand. With years of experience and a passionate team, we bring your vision to life.</p>
   </section>  <section id="services">
     <h2>Our Services</h2>
     <div class="services">
-      <div class="card">
+      <div class="card scroll-anim">
         <h3>Expo Stall Design</h3>
         <p>Custom-made stall designs that grab attention and communicate your brand message.</p>
       </div>
-      <div class="card">
+      <div class="card scroll-anim">
         <h3>Fabrication & Setup</h3>
         <p>Complete on-site fabrication and installation support for any event size.</p>
       </div>
-      <div class="card">
+      <div class="card scroll-anim">
         <h3>Lighting & Branding</h3>
         <p>We provide lighting, branding and digital integration for a modern experience.</p>
       </div>
     </div>
   </section>  <section id="projects">
     <h2>Our Projects</h2>
-    <div class="projects">
-      <div class="card">
+    <div class="projects-gallery">
+      <div class="card scroll-anim">
         <img src="https://via.placeholder.com/300x200" alt="Project 1">
         <p>Dhaka Expo 2024 - Tech Booth</p>
       </div>
-      <div class="card">
+      <div class="card scroll-anim">
         <img src="https://via.placeholder.com/300x200" alt="Project 2">
         <p>Chittagong Fair - Fashion Pavilion</p>
       </div>
-      <div class="card">
+      <div class="card scroll-anim">
         <img src="https://via.placeholder.com/300x200" alt="Project 3">
         <p>Rajshahi Trade Show - Food Zone</p>
       </div>
     </div>
   </section>  <section id="testimonials">
     <h2>Client Reviews</h2>
-    <div class="testimonial">
+    <div class="testimonial scroll-anim">
       <p>“WOOD Communication made our expo experience seamless and spectacular. Highly recommended!” – <strong>Expo Organizer, BD</strong></p>
     </div>
-    <div class="testimonial">
+    <div class="testimonial scroll-anim">
       <p>“Excellent design sense and timely execution. The team is very professional.” – <strong>Event Manager</strong></p>
     </div>
   </section>  <section id="contact">
     <h2>Contact Us</h2>
-    <form>
+    <form class="scroll-anim">
       <input type="text" placeholder="Your Name" required>
       <input type="email" placeholder="Your Email" required>
       <textarea placeholder="Your Message" rows="5" required></textarea>
@@ -85,6 +100,16 @@
     </form>
   </section>  <footer>
     <p>&copy; 2025 WOOD Communication. All Rights Reserved.</p>
-  </footer>
-</body>
-</html>
+  </footer>  <script>
+    const scrollItems = document.querySelectorAll('.scroll-anim');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    scrollItems.forEach(item => observer.observe(item));
+  </script></body>
+        </html>
