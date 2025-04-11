@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ক্লায়েন্ট স্লাইডার</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    .slider {
+      width: 100%;
+      max-width: 800px;
+      margin: 50px auto;
+      overflow: hidden;
+      position: relative;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+    }
+    .slide img {
+      width: 100%;
+      display: block;
+    }
+    .navigation {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: space-between;
+      z-index: 10;
+    }
+    .prev, .next {
+      background-color: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+    .dots {
+      text-align: center;
+      padding: 10px;
+    }
+    .dot {
+      height: 15px;
+      width: 15px;
+      margin: 0 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+    }
+    .active {
+      background-color: #717171;
+    }
+  </style>
+</head>
+<body>
+  <div class="slider">
+    <div class="slides">
+      <div class="slide"><img src="https://woodcommunication.vercel.app/toko.jpg" alt="ক্লায়েন্ট ১"></div>
+      <div class="slide"><img src="https://woodcommunication.vercel.app/toko1.jpg" alt="ক্লায়েন্ট ২"></div>
+      <div class="slide"><img src="https://woodcommunication.vercel.app/toko2.jpg" alt="ক্লায়েন্ট ৩"></div>
+      <div class="slide"><img src="https://woodcommunication.vercel.app/toko3.jpg" alt="ক্লায়েন্ট ৪"></div>
+    </div>
+    <div class="navigation">
+      <button class="prev" onclick="moveSlide(-1)">❮</button>
+      <button class="next" onclick="moveSlide(1)">❯</button>
+    </div>
+    <div class="dots">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+  </div>
+
+  <script>
+    let slideIndex = 1;
+    let autoSlideInterval;
+
+    function showSlides(n) {
+      let slides = document.getElementsByClassName("slide");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+
+    function moveSlide(n) {
+      clearInterval(autoSlideInterval);
+      showSlides(slideIndex += n);
+      autoSlideInterval = setInterval(function() { moveSlide(1) }, 3000);
+    }
+
+    function currentSlide(n) {
+      clearInterval(autoSlideInterval);
+      showSlides(slideIndex = n);
+      autoSlideInterval = setInterval(function() { moveSlide(1) }, 3000);
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      showSlides(slideIndex);
+      autoSlideInterval = setInterval(function() { moveSlide(1) }, 3000);
+    });
+  </script>
+</body>
+</html>
