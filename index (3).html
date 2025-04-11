@@ -1,0 +1,144 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WOOD Communication | Expo Stall Expert</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+  <style>
+    body { margin: 0; font-family: 'Roboto', sans-serif; }
+    header { background: linear-gradient(90deg, #e63946, #1d3557); color: white; padding: 60px 20px; text-align: center; }
+    header h1 { margin: 0; font-size: 3em; }
+    nav { background: #1d3557; display: flex; justify-content: center; padding: 10px 0; position: sticky; top: 0; z-index: 1000; }
+    nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+    section { padding: 40px 20px; max-width: 1000px; margin: auto; }
+    .services, .projects-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .card { background: #f1f1f1; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .testimonial { background: #f8f9fa; padding: 30px; border-left: 5px solid #e63946; margin-bottom: 20px; }
+    footer { background: #1d3557; color: white; text-align: center; padding: 20px; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+    .gallery a img { width: 100%; border-radius: 8px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .gallery a:hover img { transform: scale(1.05); box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+    .scroll-anim { opacity: 0; transform: translateY(30px); transition: all 0.6s ease-out; }
+    .scroll-anim.visible { opacity: 1; transform: translateY(0); }
+    .achievements { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px; }
+    .achievements img { width: 100%; max-width: 450px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+    .contact-options { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
+    .contact-options a { display: flex; align-items: center; gap: 10px; background: #f4f4f4; padding: 12px 15px; border-radius: 8px; text-decoration: none; color: #333; font-weight: bold; transition: background 0.3s ease; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .contact-options a:hover { background: #e63946; color: white; }
+    .contact-options a span { font-size: 1.1em; }
+    .address-box { margin-top: 30px; background: #f8f9fa; padding: 20px; border-left: 5px solid #1d3557; border-radius: 5px; font-size: 1.1em; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>WOOD Communication</h1>
+    <p>Professional Expo Stall & Event Setup Services</p>
+  </header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>  <section id="gallery">
+    <h2>Expo Stall Gallery</h2>
+    <div class="gallery">
+      <a href="https://woodcommunication.vercel.app/assets/img/Screenshot_2025_0114_154144.png" data-lightbox="expo" data-title="compani name : crancemold  Expo : wpsa"><img src="https://woodcommunication.vercel.app/assets/img/Screenshot_2025_0114_154144.png" alt="Stall 1"></a>
+      <a href="https://woodcommunication.vercel.app/assets/img/Screenshot_2025_0114_154113.png" data-lightbox="expo" data-title="compani name : protik ceramix  expo : ceramix expo"><img src="https://woodcommunication.vercel.app/assets/img/Screenshot_2025_0114_154113.png" alt="Stall 2"></a>
+      <a href="https://via.placeholder.com/1000x700?text=Stall+3" data-lightbox="expo" data-title="Stall 3"><img src="https://via.placeholder.com/300x200?text=Stall+3" alt="Stall 3"></a>
+      <a href="https://via.placeholder.com/1000x700?text=Stall+4" data-lightbox="expo" data-title="Stall 4"><img src="https://via.placeholder.com/300x200?text=Stall+4" alt="Stall 4"></a>
+      <a href="https://via.placeholder.com/1000x700?text=Stall+5" data-lightbox="expo" data-title="Stall 5"><img src="https://via.placeholder.com/300x200?text=Stall+5" alt="Stall 5"></a>
+      <a href="https://via.placeholder.com/1000x700?text=Stall+6" data-lightbox="expo" data-title="Stall 6"><img src="https://via.placeholder.com/300x200?text=Stall+6" alt="Stall 6"></a>
+    </div>
+  </section>  <section id="about">
+    <h2>About Us</h2>
+    <p>WOOD Communication is a leading company in Expo Stall setup, providing innovative, eye-catching, and professional exhibition booths tailored to your brand. With years of experience and a passionate team, we bring your vision to life.</p>
+  </section>  <section id="achievements">
+    <h2>Our Achievements</h2>
+    <p>We are proud to announce that in the IPF Expo 2023, WOOD Communication won both 1st and 2nd place awards for excellence in stall design and execution.</p>
+    <div class="achievements">
+      <img src="https://woodcommunication.vercel.app/assets/img/20241227_163452.jpg" alt="1st Prize IPF Expo 2023">
+      <img src="https://woodcommunication.vercel.app/assets/img/20241227_163615.jpg" alt="2nd Prize IPF Expo 2023">
+    </div>
+  </section>  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="card scroll-anim">
+        <h3>Expo Stall Design</h3>
+        <p>Custom-made stall designs that grab attention and communicate your brand message.</p>
+      </div>
+      <div class="card scroll-anim">
+        <h3>Fabrication & Setup</h3>
+        <p>Complete on-site fabrication and installation support for any event size.</p>
+      </div>
+      <div class="card scroll-anim">
+        <h3>Lighting & Branding</h3>
+        <p>We provide lighting, branding and digital integration for a modern experience.</p>
+      </div>
+    </div>
+  </section>  <section id="projects">
+    <h2>Our Projects</h2>
+    <div class="projects-gallery">
+      <div class="card scroll-anim">
+        <img src="https://via.placeholder.com/300x200" alt="Project 1">
+        <p>Dhaka Expo 2024 - Tech Booth</p>
+      </div>
+      <div class="card scroll-anim">
+        <img src="https://via.placeholder.com/300x200" alt="Project 2">
+        <p>Chittagong Fair - Fashion Pavilion</p>
+      </div>
+      <div class="card scroll-anim">
+        <img src="https://via.placeholder.com/300x200" alt="Project 3">
+        <p>Rajshahi Trade Show - Food Zone</p>
+      </div>
+    </div>
+  </section>
+  <section class="expo-slider">
+    <h2>EXPOs We Work With</h2>
+    <div class="slider-track">
+      <div class="expo-item">Dhaka International Trade Fair</div>
+      <div class="expo-item">IPF Expo</div>
+      <div class="expo-item">BASIS SoftExpo</div>
+      <div class="expo-item">BAPA FoodPro</div>
+      <div class="expo-item">BATEXPO</div>
+      <div class="expo-item">REHAB Fair</div>
+      <div class="expo-item">Dhaka Fashion Expo</div>
+      <div class="expo-item">Digital World</div>
+      <div class="expo-item">Agro Bangladesh Expo</div>
+      <div class="expo-item">Bangladesh BuildCon</div>
+    </div>
+</section><section id="testimonials">
+    <h2>Client Reviews</h2>
+    <div class="testimonial scroll-anim">
+      <p>“WOOD Communication made our expo experience seamless and spectacular. Highly recommended!” – <strong>Expo Organizer, BD</strong></p>
+    </div>
+    <div class="testimonial scroll-anim">
+      <p>“Excellent design sense and timely execution. The team is very professional.” – <strong>Event Manager</strong></p>
+    </div>
+  </section>  <section id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-options scroll-anim">
+      <a href="tel:+8801685656924"><span>Call: +8801685656924</span></a>
+      <a href="https://wa.me/8801685656924" target="_blank"><span>WhatsApp: +8801685656924</span></a>
+      <a href="mailto:saiduul@gmail.com"><span>Email: saiduul@gmail.com</span></a>
+    </div>
+    <div class="address-box scroll-anim">
+      <strong>Office Address:</strong><br>
+      Uttora, Sector #5, Road #6A, Exit
+    </div>
+  </section>  <footer>
+    <p>&copy; 2025 WOOD Communication. All Rights Reserved.</p>
+  </footer>  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>  <script>
+    const scrollItems = document.querySelectorAll('.scroll-anim');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    scrollItems.forEach(item => observer.observe(item));
+  </script></body>
+</html>
