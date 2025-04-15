@@ -1,74 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D FBX Model Viewer</title>
-    <!-- Include Three.js and FBXLoader -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/examples/js/loaders/FBXLoader.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/examples/js/controls/OrbitControls.js"></script>
-    <style>
-        body { margin: 0; }
-        canvas { display: block; }
-    </style>
-</head>
-<body>
-
-<script>
-    // Scene, camera, and renderer setup
-    var scene = new THREE.Scene();
-    var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    var renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    document.body.appendChild(renderer.domElement);
-
-    // Add light sources
-    var light = new THREE.AmbientLight(0x404040, 5); // Ambient light
-    scene.add(light);
-
-    var directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-    directionalLight.position.set(5, 5, 5);
-    scene.add(directionalLight);
-
-    // FBX Loader
-    var loader = new THREE.FBXLoader();
-    loader.load('Dragon 2.5_fbx.fbx', function (object) {
-        object.scale.set(0.1, 0.1, 0.1);  // Scale the model down if it's too big
-        scene.add(object);
-
-        // Optional: Add animation (if your FBX file has animation)
-        var mixer = new THREE.AnimationMixer(object);
-        object.animations.forEach(function (clip) {
-            mixer.clipAction(clip).play();
-        });
-
-        // Render loop for animations
-        var clock = new THREE.Clock();
-        function animate() {
-            requestAnimationFrame(animate);
-            var delta = clock.getDelta();
-            mixer.update(delta);
-            renderer.render(scene, camera);
-        }
-
-        animate();
-    });
-
-    // Camera positioning
-    camera.position.z = 5;
-
-    // Handle window resizing
-    window.addEventListener('resize', function () {
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-    });
-
-    // Add Orbit Controls for interaction
-    var controls = new THREE.OrbitControls(camera, renderer.domElement);
-
-</script>
-
-</body>
-</html>
+<div class="projects-gallery">
+  <div class="card scroll-anim">
+    <img src="https://woodcommunication.vercel.app/20250411_134959.png" alt="Project 1">
+    <p>DTG Expo 2024 - WC WORK</p>
+    <a href="https://woodcommunication.vercel.app/" target="_blank">
+      <button style="padding: 8px 16px; margin-top: 10px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        Visit Project
+      </button>
+    </a>
+  </div>
+</div>
