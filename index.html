@@ -152,17 +152,75 @@
     </div>
   </section> 
     <h2>Our Clints</h2>
-  <div class="slider">
+<!-- Image Slider Start -->
+<div class="slider">
   <div class="slides">
-    <img src="image1.jpg" alt="Slide 1">
-    <img src="image2.jpg" alt="Slide 2">
-    <img src="image3.jpg" alt="Slide 3">
+    <img src="https://via.placeholder.com/800x400/ff7f7f/333333?text=Slide+1" alt="Slide 1">
+    <img src="https://via.placeholder.com/800x400/7fafff/333333?text=Slide+2" alt="Slide 2">
+    <img src="https://via.placeholder.com/800x400/7fff7f/333333?text=Slide+3" alt="Slide 3">
   </div>
   <div class="navigation">
     <button class="nav-btn" onclick="prevSlide()">‹</button>
     <button class="nav-btn" onclick="nextSlide()">›</button>
   </div>
-  </div>
+</div>
+
+<style>
+  .slider {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  .slides img {
+    width: 100%;
+    flex-shrink: 0;
+  }
+  .navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  .nav-btn {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  let slides = document.querySelector('.slides');
+  let totalSlides = slides.children.length;
+  let index = 0;
+
+  function showSlide(i) {
+    index = (i + totalSlides) % totalSlides;
+    slides.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  function nextSlide() {
+    showSlide(index + 1);
+  }
+
+  function prevSlide() {
+    showSlide(index - 1);
+  }
+
+  setInterval(nextSlide, 3000); // Auto slide
+</script>
+<!-- Image Slider End -->
 <iframe src="https://task-to-earn.vercel.app/slider.html" width="100%" height="600" style="border:none; overflow:hidden;" scrolling="no"></iframe>
   <section id="contact">
     <h2>Contact Us</h2>
