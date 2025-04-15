@@ -79,12 +79,18 @@
     </div>
   </section>  <section id="projects">
     <h2>Our Projects</h2>
-    <style>
-  .projects-gallery {
+<style>
+  /* Scoped styling using unique class prefix */
+  .wc-card-gallery {
     padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    max-width: 500px;
+    margin: auto;
   }
 
-  .card {
+  .wc-card {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -97,41 +103,39 @@
     transition: transform 0.2s;
   }
 
-  .card:hover {
+  .wc-card:hover {
     transform: scale(1.02);
   }
 
-  .card img {
+  .wc-card img {
     height: 40px;
     width: auto;
   }
 
-  .card p {
+  .wc-card p {
     font-size: 18px;
     margin: 0;
   }
 </style>
 
-<div class="projects-gallery">
-  <a href="https://drive.google.com/file/d/11gntFtUjHNUZmDWyRPMIFdSe5x6nocY3/view?usp=drivesdk" class="card scroll-anim" target="_blank">
+<div class="wc-card-gallery">
+  <a href="https://woodcommunication.vercel.app/" class="wc-card" target="_blank">
     <img src="https://woodcommunication.vercel.app/20250411_134959.png" alt="Project 1">
     <p>DTG Expo 2024 - WC WORK</p>
   </a>
+  <a href="https://example.com/project2" class="wc-card" target="_blank">
+    <img src="https://via.placeholder.com/40x40.png?text=P2" alt="Project 2">
+    <p>Trade Fair 2023 - WC WORK</p>
+  </a>
+  <a href="https://example.com/project3" class="wc-card" target="_blank">
+    <img src="https://via.placeholder.com/40x40.png?text=P3" alt="Project 3">
+    <p>Expo Stall Design - WC WORK</p>
+  </a>
+  <a href="https://example.com/project4" class="wc-card" target="_blank">
+    <img src="https://via.placeholder.com/40x40.png?text=P4" alt="Project 4">
+    <p>Corporate Booth - WC WORK</p>
+  </a>
 </div>
-    <div class="projects-gallery">
-      <div class="card scroll-anim">
-        <img src="https://woodcommunication.vercel.app/20250411_134959.png" alt="Project 1">
-        <p>DTG Expo 2024 - WC WORK</p>
-      </div>
-      <div class="card scroll-anim">
-        <img src="https://via.placeholder.com/300x200" alt="Project 2">
-        <p>Chittagong Fair - Fashion Pavilion</p>
-      </div>
-      <div class="card scroll-anim">
-        <img src="https://via.placeholder.com/300x200" alt="Project 3">
-        <p>Rajshahi Trade Show - Food Zone</p>
-      </div>
-    </div>
   </section>
   <section class="expo-slider">
   <h2>EXPOs We Work With</h2>
