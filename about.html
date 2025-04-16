@@ -7,94 +7,131 @@
   <meta name="author" content="WOOD Communication" />
   <title>WOOD Communication | Best Event Management Company in Dhaka</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');body {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.8;
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');* {
   margin: 0;
-  background-color: #f0f3f8;
-  color: #333;
-  overflow-x: hidden;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f4f6fc 0%, #e3f2fd 100%);
+  color: #2c2c2c;
+  overflow-x: hidden;
+  transition: all 0.3s ease;
+}
+
 header {
-  background: linear-gradient(90deg, #b71c1c, #0d47a1);
-  padding: 20px;
+  background: linear-gradient(90deg, #0d47a1, #b71c1c);
+  padding: 30px 20px;
   color: white;
   text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   animation: slideDown 1s ease-out;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
+
 header img {
-  height: 60px;
-  margin-bottom: 10px;
-  animation: rotateLogo 2s infinite linear;
+  height: 70px;
+  margin-bottom: 15px;
 }
+
 .container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
-  padding: 20px;
+  padding: 40px 20px;
 }
+
 .section {
   background: white;
-  border-radius: 12px;
-  padding: 30px;
-  margin: 20px 0;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  animation: fadeInUp 0.8s ease;
+  border-radius: 16px;
+  padding: 40px;
+  margin: 30px 0;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  animation: fadeInUp 0.9s ease;
 }
+
 h1, h2, h3 {
   color: #b71c1c;
+  margin-bottom: 20px;
+  font-weight: 600;
   animation: fadeIn 1s ease-in;
 }
+
 ul {
   padding-left: 20px;
+  line-height: 1.8;
 }
+
 a {
   color: #0d47a1;
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
 }
+
+.cta-button {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: #b71c1c;
+  color: #fff;
+  border-radius: 6px;
+  margin-top: 20px;
+  font-weight: 500;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+  background-color: #0d47a1;
+  transform: translateY(-2px);
+}
+
 footer {
   background: #111;
   color: #ccc;
   text-align: center;
-  padding: 15px;
+  padding: 20px;
+  font-size: 14px;
   animation: fadeIn 2s;
 }
-.cta-button {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #0d47a1;
-  color: #fff;
-  border-radius: 5px;
-  margin-top: 10px;
-  transition: 0.3s;
-  animation: pulse 1.5s infinite;
-}
-.cta-button:hover {
-  background-color: #b71c1c;
-}
 
+/* Animations */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(40px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
 @keyframes slideDown {
   from { transform: translateY(-100%); }
   to { transform: translateY(0); }
 }
-@keyframes rotateLogo {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
+
+/* Responsive */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+  .section {
+    padding: 20px;
+  }
+  .cta-button {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
 }
 
   </style>
@@ -106,10 +143,10 @@ footer {
   </header>  <div class="container"><div class="section">
   <h2>About Us</h2>
   <p>WOOD Communication is a leading name in Bangladesh’s event and exhibition industry. With over 15 years of experience, we offer full-service event solutions including stall design, roadshows, product launches, and brand activations nationwide.</p>
-  <a href="mailto:MKTG2.WOOD@gmail.com" class="cta-button">Contact Us</a>
+  <a href="#services" class="cta-button">Explore Services</a>
 </div>
 
-<div class="section">
+<div class="section" id="services">
   <h3>Our Key Services</h3>
   <ul>
     <li>Exhibition Stall Design & Fabrication</li>
