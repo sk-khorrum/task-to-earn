@@ -1,278 +1,158 @@
 <!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>WOOD Communication | Best Event Management Company</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WOOD Communication - Best Event Management Company in Dhaka</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    * {
+    body {
+      font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #fefefe;
-      color: #222;
-      line-height: 1.6;
+      background-color: #fff;
+      color: #333;
     }
     header {
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      background-color: white;
-      padding: 10px 20px;
+      background-color: #e91e63;
+      padding: 20px;
       display: flex;
       align-items: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      justify-content: space-between;
+      color: #fff;
     }
     header img {
       height: 50px;
-      margin-right: 15px;
     }
     header h1 {
-      font-size: 22px;
-      color: #d11a2a;
+      margin: 0;
+      font-size: 24px;
     }
-    section {
-      padding: 40px 20px;
+    .container {
       max-width: 1000px;
-      margin: auto;
-      animation: fadeIn 1s ease forwards;
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
+      margin: 30px auto;
+      padding: 20px;
     }
     h2 {
-      font-size: 26px;
-      color: #d11a2a;
-      margin-bottom: 15px;
+      color: #e91e63;
     }
-    ul {
-      padding-left: 20px;
+    section {
+      margin-bottom: 40px;
     }
-    .whatsapp-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      text-align: center;
-      font-size: 30px;
-      line-height: 60px;
-      z-index: 999;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      text-decoration: none;
+    .team, .testimonials, .faq, .clients {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
-    .whatsapp-btn:hover {
-      background-color: #1da851;
-    }
-    .cta {
-      text-align: center;
-      margin-top: 20px;
-    }
-    .cta a {
-      display: inline-block;
-      background-color: #d11a2a;
-      color: white;
-      padding: 12px 25px;
-      margin: 10px;
-      border-radius: 25px;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-    .cta a:hover {
-      background-color: #b81422;
-    }
-    .testimonial {
-      background: #f8f8f8;
+    .card {
+      border: 1px solid #ddd;
       padding: 20px;
-      margin: 20px 0;
-      border-left: 4px solid #d11a2a;
+      border-radius: 10px;
+      background-color: #fafafa;
+      transition: transform 0.3s ease;
     }
-    .testimonial p {
-      font-style: italic;
-    }
-    .testimonial strong {
-      display: block;
-      margin-top: 10px;
-      color: #444;
-    }
-    .counters {
-      display: flex;
-      justify-content: space-around;
-      text-align: center;
-      margin-top: 40px;
+    .card:hover {
+      transform: scale(1.05);
     }
     .counter {
-      font-size: 28px;
-      font-weight: bold;
-      color: #d11a2a;
-    }
-    .clients {
-      display: flex;
-      overflow-x: auto;
-      gap: 20px;
-      padding: 20px;
-    }
-    .clients img {
-      height: 60px;
-      flex-shrink: 0;
-    }
-    .team, .faq {
-      background-color: #fafafa;
-      padding: 30px;
-      border-radius: 10px;
-    }
-    .team-member {
+      font-size: 32px;
+      color: #e91e63;
       text-align: center;
-      margin-bottom: 20px;
     }
-    .team-member img {
-      border-radius: 50%;
-      width: 100px;
-      height: 100px;
-    }
-    .faq-item {
-      margin-bottom: 15px;
-    }
-    .faq-item h4 {
-      margin-bottom: 5px;
-      color: #d11a2a;
-    }
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    footer {
+      background-color: #e91e63;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="WOOD Communication Logo"/>
+    <img src="https://i.ibb.co/4Z1dXZw/wood-logo.png" alt="WOOD Communication Logo">
     <h1>WOOD Communication</h1>
-  </header>  <section>
-    <h2>Best Event Management Company in Dhaka, Bangladesh</h2>
-    <p><strong>WOOD Communication</strong> is one of the top award-winning event planners in Bangladesh. With over 15 years of experience, we specialize in:</p>
-    <ul>
-      <li>Corporate Events & Seminars</li>
-      <li>Exhibition Management & Stand Fabrication</li>
-      <li>Brand Activation & BTL Activities</li>
-      <li>Product Launching & Promotions</li>
-      <li>Concerts & Fashion Shows</li>
-    </ul>
-  </section>  <section>
-    <h2>Our Services</h2>
-    <p>We handle everything from concept development to flawless execution:</p>
-    <ul>
-      <li>Creative Event Designing & Branding</li>
-      <li>Lighting, AV Setup, Stage Design</li>
-      <li>Celebrity & Influencer Management</li>
-      <li>Roadshows, In-Shop Promotions, Rural Marketing</li>
-      <li>Photography, Live Streaming & Logistics</li>
-    </ul>
-  </section>  <section>
-    <h2>Concerts, Seminars & Conferences</h2>
-    <ul>
-      <li>Delegate Accommodation & Venue Booking</li>
-      <li>Speaker Engagement & Stage Management</li>
-      <li>Ground Transportation & Audiovisual Management</li>
-    </ul>
-  </section>  <section class="counters">
-    <div>
-      <div class="counter" data-target="500">0</div>
-      <p>Events Managed</p>
-    </div>
-    <div>
-      <div class="counter" data-target="200">0</div>
-      <p>Clients Served</p>
-    </div>
-    <div>
-      <div class="counter" data-target="15">0</div>
-      <p>Years of Experience</p>
-    </div>
-  </section>  <section>
-    <h2>Trusted by Clients</h2>
-    <div class="clients">
-      <img src="client1.png" alt="Client 1">
-      <img src="client2.png" alt="Client 2">
-      <img src="client3.png" alt="Client 3">
-      <img src="client4.png" alt="Client 4">
-    </div>
-  </section>  <section class="team">
-    <h2>Meet Our Team</h2>
-    <div class="team-member">
-      <img src="team1.jpg" alt="Team Member 1">
-      <h4>Rafiq Hossain</h4>
+  </header>  <div class="container">
+    <section>
+      <h2>About Us</h2>
+      <p>WOOD Communication is the best event management company in Dhaka, Bangladesh. We specialize in corporate events, exhibitions, product launches, concerts, and brand activations with 15+ years of experience.</p>
+    </section><section>
+  <h2>Our Services</h2>
+  <ul>
+    <li>Corporate Event Management</li>
+    <li>Conference & Seminars</li>
+    <li>Exhibition Stand Fabrication</li>
+    <li>Brand Activation</li>
+    <li>Concerts and Fashion Shows</li>
+    <li>Celebrity & Influencer Management</li>
+    <li>AV Equipment & Stage Setup</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Why Choose Us</h2>
+  <div class="counter">
+    <div><strong id="clients">1000+</strong><br>Happy Clients</div>
+    <div><strong id="events">1500+</strong><br>Successful Events</div>
+    <div><strong id="years">15+</strong><br>Years Experience</div>
+  </div>
+</section>
+
+<section>
+  <h2>Meet Our Team</h2>
+  <div class="team">
+    <div class="card">
+      <h3>Rahim Uddin</h3>
       <p>CEO & Founder</p>
     </div>
-    <div class="team-member">
-      <img src="team2.jpg" alt="Team Member 2">
-      <h4>Fatima Akter</h4>
-      <p>Creative Director</p>
+    <div class="card">
+      <h3>Fahmida Akter</h3>
+      <p>Event Director</p>
     </div>
-  </section>  <section class="faq">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-item">
-      <h4>Do you provide services outside Dhaka?</h4>
-      <p>Yes, we cover events all over Bangladesh.</p>
+    <div class="card">
+      <h3>Tanvir Hasan</h3>
+      <p>Creative Lead</p>
     </div>
-    <div class="faq-item">
-      <h4>Can we customize the event plan?</h4>
-      <p>Absolutely! We tailor everything to your needs.</p>
-    </div>
-  </section>  <section>
-    <h2>Client Testimonials</h2>
-    <div class="testimonial">
-      <p>"WOOD Communication turned our product launch into a nationwide success! Highly professional team with brilliant ideas."</p>
-      <strong>- Rahim Uddin, CEO of NextGen Tech</strong>
-    </div>
-    <div class="testimonial">
-      <p>"Their team managed our corporate seminar flawlessly. Everything was timely, elegant, and stress-free."</p>
-      <strong>- Sarah Rahman, Event Coordinator, ABC Corp</strong>
-    </div>
-  </section>  <div class="cta">
-    <a href="#">Book Your Event</a>
-    <a href="#">Learn More</a>
-  </div><a class="whatsapp-btn" href="https://wa.me/8801XXXXXXXXX" target="_blank">✉</a>
+  </div>
+</section>
 
-  <script>
-    const sections = document.querySelectorAll("section");
-    const reveal = () => {
-      const triggerBottom = window.innerHeight * 0.85;
-      sections.forEach(section => {
-        const top = section.getBoundingClientRect().top;
-        if (top < triggerBottom) {
-          section.classList.add("visible");
-        }
-      });
-    };
-    window.addEventListener("scroll", reveal);
-    reveal();
+<section>
+  <h2>Client Testimonials</h2>
+  <div class="testimonials">
+    <div class="card">
+      <p>“WOOD Communication made our product launch unforgettable. Highly recommended!”</p>
+      <p><strong>- Unilever BD</strong></p>
+    </div>
+    <div class="card">
+      <p>“Professional, creative, and reliable – they handled everything smoothly.”</p>
+      <p><strong>- Robi Axiata</strong></p>
+    </div>
+  </div>
+</section>
 
-    const counters = document.querySelectorAll('.counter');
-    counters.forEach(counter => {
-      counter.innerText = '0';
-      const updateCount = () => {
-        const target = +counter.getAttribute('data-target');
-        const count = +counter.innerText;
-        const speed = 50;
-        const increment = target / speed;
-        if(count < target) {
-          counter.innerText = `${Math.ceil(count + increment)}`;
-          setTimeout(updateCount, 40);
-        } else {
-          counter.innerText = target;
-        }
-      };
-      updateCount();
-    });
-  </script></body>
+<section>
+  <h2>FAQs</h2>
+  <div class="faq">
+    <div class="card">
+      <h4>Do you manage events outside Dhaka?</h4>
+      <p>Yes, we operate nationwide including Chittagong, Sylhet, and Khulna.</p>
+    </div>
+    <div class="card">
+      <h4>What’s your minimum project size?</h4>
+      <p>We cater to events of all sizes, from small seminars to large-scale concerts.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Our Trusted Clients</h2>
+  <div class="clients">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Unilever_logo.svg/1280px-Unilever_logo.svg.png" alt="Unilever Logo" height="50">
+    <img src="https://i.ibb.co/D8VZcWN/robi.png" alt="Robi Logo" height="50">
+    <img src="https://i.ibb.co/Vq3Zw8c/bkash.png" alt="bKash Logo" height="50">
+  </div>
+</section>
+
+  </div>  <footer>
+    <p>&copy; 2025 WOOD Communication. All Rights Reserved.</p>
+  </footer>
+</body>
 </html>
