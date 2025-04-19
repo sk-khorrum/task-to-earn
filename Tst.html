@@ -1,0 +1,97 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WOOD Communication</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f7fa;
+    }
+    .header {
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    .section {
+      background-color: white;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 15px;
+      border: 2px solid #ccc;
+      position: relative;
+      overflow: hidden;
+    }
+    .section::before, .section::after {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: repeating-linear-gradient(
+        45deg,
+        red,
+        red 10px,
+        white 10px,
+        white 20px
+      );
+      clip-path: polygon(0 0, 100% 0, 0 100%);
+      opacity: 0.2;
+    }
+    .section::before {
+      top: 0;
+      left: 0;
+    }
+    .section::after {
+      bottom: 0;
+      right: 0;
+      transform: rotate(180deg);
+    }
+    .section h2 {
+      color: #b20000;
+      margin-top: 0;
+    }
+    .section p, .section ul li {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .read-more {
+      text-align: right;
+      font-weight: bold;
+      color: #e60044;
+    }
+    .services ul {
+      padding-left: 20px;
+    }
+    .services ul li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>  <div class="header">
+    <h1>Best Event & Expo Stall Management Company in Dhaka, Bangladesh</h1>
+  </div>  <div class="section about">
+    <h2>About Us</h2>
+    <p>
+      WOOD Communication is a leading name in Bangladesh’s event and exhibition industry. 
+      With over 15 years of experience, we offer full-service event solutions including stall design, 
+      roadshows, product launches, and brand activations nationwide.
+    </p>
+    <div class="read-more">reed more</div>
+  </div>  <div class="section services">
+    <h2>Our Key Services</h2>
+    <ul>
+      <li>Exhibition Stall Design & Fabrication</li>
+      <li>Corporate Event Planning</li>
+      <li>Roadshows & Brand Activation</li>
+      <li>Seminars, Trade Fairs & Business Expos</li>
+      <li>Interior for Event Spaces</li>
+    </ul>
+  </div></body>
+</html>
