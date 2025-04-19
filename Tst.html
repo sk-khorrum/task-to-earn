@@ -32,39 +32,39 @@
     .section::before, .section::after {
       content: "";
       position: absolute;
-      width: 100px;
-      height: 100px;
-      background: repeating-linear-gradient(
-        45deg,
-        red,
-        red 10px,
-        white 10px,
-        white 20px
-      );
-      clip-path: polygon(0 0, 100% 0, 0 100%);
-      opacity: 0.2;
+      width: 120px;
+      height: 100%;
+      background-image: url('https://i.imgur.com/wUugUWi.png'); /* Representative design image */
+      background-size: contain;
+      background-repeat: no-repeat;
     }
     .section::before {
       top: 0;
       left: 0;
     }
     .section::after {
-      bottom: 0;
+      top: 0;
       right: 0;
-      transform: rotate(180deg);
+      transform: scaleX(-1);
     }
     .section h2 {
       color: #b20000;
       margin-top: 0;
+      position: relative;
+      z-index: 1;
     }
     .section p, .section ul li {
       font-size: 16px;
       line-height: 1.5;
+      position: relative;
+      z-index: 1;
     }
     .read-more {
       text-align: right;
       font-weight: bold;
       color: #e60044;
+      position: relative;
+      z-index: 1;
     }
     .services ul {
       padding-left: 20px;
