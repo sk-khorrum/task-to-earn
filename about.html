@@ -7,6 +7,64 @@
   <meta name="author" content="WOOD Communication" />
   <title>WOOD Communication | Best Event Management Company in Dhaka</title>
   <style>
+
+    <style>
+  .decorated-box {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #ccc;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .decorated-box::before,
+  .decorated-box::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 100%;
+    background-image: url('https://i.imgur.com/wUugUWi.png'); /* চাইলে নিজের ইমেজ লিংক বসাও */
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+    z-index: 0;
+  }
+
+  .decorated-box::before {
+    top: 0;
+    left: 0;
+  }
+
+  .decorated-box::after {
+    top: 0;
+    right: 0;
+    transform: scaleX(-1);
+  }
+
+  .decorated-box > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .decorated-box h2 {
+    color: #b20000;
+    margin-top: 0;
+  }
+
+  .decorated-box p,
+  .decorated-box ul li {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .read-more {
+    text-align: right;
+    font-weight: bold;
+    color: #e60044;
+  }
+</style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');* {
   margin: 0;
   padding: 0;
@@ -139,9 +197,16 @@ footer {
 <body>  <header>
     <img src="https://woodcommunication.vercel.app/assets/img/logo.png" alt="WOOD Communication Logo" />
     <p>Best Event & Expo Stall Management Company in Dhaka, Bangladesh</p>
-  </header>  <div class="container"><div class="section">
-  <h2>About Us</h2>
+  </header>  <div class="container"><div 
+                                      <div class="decorated-box">
+  <h2>Section Title</h2>
+  <p>
+      <h2>About Us</h2>
   <p>WOOD Communication is a leading name in Bangladesh’s event and exhibition industry. With over 15 years of experience, we offer full-service event solutions including stall design, roadshows, product launches, and brand activations nationwide.</p>
+
+  </p>
+  <div class="read-more">reed more</div>
+  </div>class="section">
   <a href="#services" class="cta-button">Explore Services</a>
 </div>
 
