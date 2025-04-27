@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <body style="margin:0;padding:0;background-color:#f5f5f5;">
+    <table align="center" width="600" cellpadding="0" cellspacing="0" style="background-color:#ffffff;font-family:Arial, sans-serif;">
+      
+      <!-- Header Section with GIF Background -->
+      <tr>
+        <td style="background-image: url('https://task-to-earn.vercel.app/GIF_20250427_190906_095.gif'); background-size: cover; background-position: center; text-align:center; padding:60px 20px;">
+          <img src="https://woodcommunication.vercel.app/assets/img/logo.png" alt="WOOD Communication" width="150" style="background:rgba(255,255,255,0.8);padding:10px;border-radius:10px;">
+        </td>
+      </tr>
+
+      <tr>
+        <td style="text-align:center;padding:10px 20px;">
+          <h1 style="font-size:24px;color:#333;margin-bottom:10px;">We Believe In Service</h1>
+        </td>
+      </tr>
+
+      <tr>
+        <td style="text-align:center;padding:20px;">
+          <a href="https://drive.google.com/file/d/11gntFtUjHNUZmDWyRPMIFdSe5x6nocY3/view?usp=drivesdk" style="display:inline-block;padding:12px 24px;background-color:#ff4d4d;color:#ffffff;text-decoration:none;font-size:16px;border-radius:5px;font-weight:bold;">
+            আমাদের প্রফাইলটি দেখুন
+          </a>
+        </td>
+      </tr>
+
+      <tr>
+        <td style="text-align:center;padding:20px;">
+          <table align="center" cellpadding="0" cellspacing="0" style="font-size:14px;color:#555;font-family:Arial, sans-serif;">
+            <tr>
+              <td style="padding:5px 0;">
+                <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone" width="20" style="vertical-align:middle;margin-right:8px;">
+                <a href="tel:+8801685656924" style="color:#ff4d4d;text-decoration:none;font-weight:bold;font-size:16px;">+8801685656924</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:5px 0;">
+                <img src="https://cdn-icons-png.flaticon.com/512/535/535239.png" alt="Location" width="20" style="vertical-align:middle;margin-right:8px;">
+                <a href="https://maps.app.goo.gl/EC5ChyN3h4up99Rx5" target="_blank" style="color:#ff4d4d;text-decoration:none;font-weight:bold;font-size:16px;">লোকেশন দেখুন</a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <tr>
+        <td style="text-align:center;padding:20px;font-size:12px;color:#888;">
+          &copy; 2025 WOOD Communication. All rights reserved.
+        </td>
+      </tr>
+
+    </table>
+  </body>
+</html>
