@@ -4,21 +4,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wood Communication</title>
   <style>
-    * {margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif;}
-    .full {width: 100vw; height: 100vh; overflow: hidden;}
-    .section {
-      width: 100%;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      overflow-x: hidden;
+    }
+    .section, .split, .split2 {
+      width: 100vw;
       height: 100vh;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      background-size: cover;
-      background-position: center;
       text-align: center;
+      position: relative;
+    }
+    .section {
+      flex-direction: column;
+      background: url('https://i.ibb.co/sChbN80/mountain.jpg') no-repeat center center/cover;
+      color: black;
       padding: 20px;
     }
-    .section img.logo {
+    .section .logo, .split .logo, .split2 .logo {
       width: 80px;
       margin-bottom: 20px;
     }
@@ -30,60 +40,47 @@
       font-size: 1.2em;
     }
     .split {
-      display: flex;
       flex-direction: row;
-      height: 100vh;
     }
     .left, .right {
       flex: 1;
+      height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      padding: 40px;
-      text-align: center;
-    }
-    .left img.logo, .right img.logo {
-      width: 80px;
-      margin-bottom: 20px;
+      padding: 30px;
     }
     .left {
-      background-color: white;
+      background-color: #ffffff;
+      color: black;
     }
     .right {
-      background-size: cover;
-      background-position: center;
+      background: url('https://i.ibb.co/9ZjK4FH/flowers.jpg') no-repeat center center/cover;
     }
     .split2 {
-      display: flex;
       flex-direction: row;
-      height: 100vh;
     }
     .left2 {
       flex: 1;
-      background-image: url('https://i.ibb.co/WVmJFgx/rainbow.jpg');
-      background-size: cover;
-      background-position: center;
+      background: url('https://i.ibb.co/WVmJFgx/rainbow.jpg') no-repeat center center/cover;
     }
     .right2 {
       flex: 1;
       background-color: black;
       color: white;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      text-align: center;
+      flex-direction: column;
+      padding: 30px;
     }
-    .right2 img.logo {
-      width: 80px;
-      margin-bottom: 20px;
-    }
-    @media(max-width: 768px){
+    @media (max-width: 768px) {
       .split, .split2 {
         flex-direction: column;
       }
       .left, .right, .left2, .right2 {
+        width: 100vw;
         height: 50vh;
       }
     }
@@ -91,7 +88,7 @@
 </head>
 <body>
   <!-- Section 1 -->
-  <div class="section" style="background-image: url('https://i.ibb.co/sChbN80/mountain.jpg');">
+  <div class="section">
     <img src="https://i.ibb.co/fMdrb5P/wood-logo.png" alt="WOOD COMMUNICATION Logo" class="logo">
     <h1>Wood communication</h1>
     <p>We believe in service</p>
@@ -101,7 +98,7 @@
       <h1>Dtg</h1>
       <p>Dtg profile of wood communication</p>
     </div>
-    <div class="right" style="background-image: url('https://i.ibb.co/9ZjK4FH/flowers.jpg');"></div>
+    <div class="right"></div>
   </div>  <!-- Section 3 -->  <div class="split2">
     <div class="left2"></div>
     <div class="right2">
