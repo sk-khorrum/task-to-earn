@@ -10,6 +10,7 @@
     body { background: #fff; color: #333; }
     .section {
       height: 100vh;
+      background: url('https://i.ibb.co/sChbN80/mountain.jpg') center/cover no-repeat;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -21,8 +22,9 @@
       max-width: 100px;
       margin-bottom: 20px;
     }
-    .section h1 { font-size: 2.5rem; margin-bottom: 10px; }
-    .section p { font-size: 1.2rem; }
+    .section h1 { font-size: 2.5rem; margin-bottom: 10px; color: #000; }
+    .section p { font-size: 1.2rem; color: #000; }
+
     .dtg, .wpsa {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -41,6 +43,14 @@
       object-fit: cover;
     }
     .black { background: #000; color: #fff; }
+    .black img {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+    .white img {
+      width: 100px;
+      margin-bottom: 20px;
+    }
     @media (max-width: 768px) {
       .dtg, .wpsa {
         grid-template-columns: 1fr;
@@ -55,9 +65,9 @@
 <body>
 
   <!-- Hero Section -->
-  <section class="section" style="background: url('https://i.ibb.co/sChbN80/mountain.jpg') center/cover no-repeat;">
+  <section class="section">
     <img src="https://i.ibb.co/fMdrb5P/wood-logo.png" alt="Logo">
-    <h1>Wood Communication</h1>
+    <h1>Wood communication</h1>
     <p>We believe in service</p>
   </section>
 
