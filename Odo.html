@@ -1,9 +1,18 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>WOOD Communication - Professional Expo Stall Design Services</title>
+<style>
+body {
+min-height: 100vh;
+min-height: -webkit-fill-available;
+}
+html {
+height: -webkit-fill-available;
+}
+</style>
 <script src="https://cdn.tailwindcss.com/3.4.16"></script>
 <script>tailwind.config={theme:{extend:{colors:{primary:'#dc2626',secondary:'#1e40af'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +31,7 @@ background: linear-gradient(135deg, #dc2626 0%, #1e40af 100%);
 <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="bg-gray-50 text-gray-800">
-<div class="relative w-[375px] mx-auto bg-white min-h-[762px] pb-16">
+<div class="relative w-full max-w-[500px] mx-auto bg-white min-h-screen pb-20">
 <!-- Header -->
 <header class="gradient-bg text-white p-4 fixed w-[375px] z-10">
 <div class="flex justify-between items-center">
@@ -34,10 +43,10 @@ background: linear-gradient(135deg, #dc2626 0%, #1e40af 100%);
 <!-- Sidebar Menu -->
 <div id="sidebarOverlay" class="fixed inset-0 bg-black/50 z-20 hidden">
 </div>
-<div id="sidebar" class="fixed top-0 left-0 w-[280px] h-full bg-white z-30 -translate-x-full transition-transform duration-300 shadow-xl">
+<div id="sidebar" class="fixed top-0 left-0 w-[280px] h-full bg-gradient-to-br from-primary to-secondary text-white z-30 -translate-x-full transition-transform duration-300 shadow-xl">
 <div class="p-4">
 <div class="flex justify-between items-center mb-6">
-<h1 class="font-['Pacifico'] text-2xl text-primary">logo</h1>
+<h1 class="font-['Pacifico'] text-2xl text-white">logo</h1>
 <button id="closeSidebarBtn" class="w-8 h-8 flex items-center justify-center cursor-pointer">
 <i class="ri-close-line ri-lg"></i>
 </button>
@@ -187,9 +196,9 @@ WOOD Communication is a leading design company specializing in expo stall and ex
 </section>
 <!-- Projects Section -->
 <section class="px-4 py-5 bg-white" id="projects">
-<h2 class="text-lg font-bold mb-3">আমাদের প্রজেক্টস</h2>
+<h2 class="text-lg font-bold mb-3">Our Projects</h2>
 <div class="space-y-3">
-<a href="#project-1" class="block bg-gray-50 p-3 rounded hover:bg-gray-100 transition-colors" data-project-link>
+<a href="/projects/itc-box-stall" class="block bg-gray-50 p-3 rounded hover:bg-gray-100 transition-colors" data-project-link>
 <div class="flex items-center">
 <div class="w-6 h-6 flex items-center justify-center bg-primary text-white rounded-full mr-2 text-xs">১</div>
 <h3 class="font-medium">ITC বক্স স্টল, ঢাকা ২০২৫</h3>
@@ -333,12 +342,21 @@ animation: scroll 20s linear infinite;
 <a href="https://goo.gl/maps/your-location" target="_blank" class="w-full bg-primary text-white py-2 mt-2 rounded-button font-medium flex items-center justify-center">
 <i class="ri-map-pin-line mr-1"></i> লোকেশন দেখুন
 </a>
+<div class="mt-4 text-center py-2 bg-gradient-to-r from-primary/10 via-primary/20 to-primary/10 rounded">
+<a href="https://example.com/skkhorrum" class="inline-block font-['Pacifico'] text-primary hover:text-secondary transition-colors">
+Designed by SK Khorrum
+</a>
+</div>
 </div>
 </div>
 </section>
 </main>
 <!-- Footer/Tab Bar -->
-<footer class="fixed bottom-0 w-[375px] bg-white border-t border-gray-200 py-2 px-4">
+<footer class="fixed bottom-0 w-full bg-white border-t border-gray-200 py-2 px-4">
+<div class="grid grid-cols-5 gap-1">
+<!-- Footer content remains the same -->
+</div>
+</footer>
 <div class="grid grid-cols-5 gap-1">
 <a href="#" class="flex flex-col items-center cursor-pointer">
 <div class="w-6 h-6 flex items-center justify-center">
@@ -542,4 +560,4 @@ hideModal();
 });
 </script>
 </body>
-</html>
+  </html>
