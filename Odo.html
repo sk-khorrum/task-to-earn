@@ -1,168 +1,565 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>WOOD Communication</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss @2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    .animate-scroll {
-      animation: scroll 30s linear infinite;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>WOOD Communication - Professional Expo Stall Design Services</title>
+<style>
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+html {
+  height: -webkit-fill-available;
+}
+</style>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#dc2626',secondary:'#1e40af'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Arial', sans-serif;
+}
+.gradient-bg {
+background: linear-gradient(135deg, #dc2626 0%, #1e40af 100%);
+}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gradient-to-br from-red-700 to-blue-900 text-white font-sans">
+<body class="bg-gray-50 text-gray-800">
+<div class="relative w-full max-w-[500px] mx-auto bg-white min-h-screen pb-20">
+<!-- Header -->
+<header class="gradient-bg text-white p-4 fixed w-[375px] z-10">
+<div class="flex justify-between items-center">
+<img src="https://readdy.ai/api/search-image?query=modern%20minimalist%20corporate%20logo%20design%2C%20professional%20business%20emblem%2C%20clean%20and%20simple%2C%20isolated%20on%20transparent%20background%2C%20high%20quality&width=120&height=40&seq=1&orientation=landscape" alt="WOOD Communication Logo" class="h-8">
+<button id="menuBtn" class="w-8 h-8 flex items-center justify-center cursor-pointer">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+<!-- Sidebar Menu -->
+<div id="sidebarOverlay" class="fixed inset-0 bg-black/50 z-20 hidden">
+</div>
+<div id="sidebar" class="fixed top-0 left-0 w-[280px] h-full bg-gradient-to-br from-primary to-secondary text-white z-30 -translate-x-full transition-transform duration-300 shadow-xl">
+<div class="p-4">
+<div class="flex justify-between items-center mb-6">
+<h1 class="font-['Pacifico'] text-2xl text-white">logo</h1>
+<button id="closeSidebarBtn" class="w-8 h-8 flex items-center justify-center cursor-pointer">
+<i class="ri-close-line ri-lg"></i>
+</button>
+</div>
+<nav class="space-y-4">
+<a href="#about" class="flex items-center space-x-2 p-2 hover:bg-primary/5 rounded">
+<i class="ri-information-line"></i>
+<span>আমাদের সম্পর্কে</span>
+</a>
+<a href="#services" class="flex items-center space-x-2 p-2 hover:bg-primary/5 rounded">
+<i class="ri-service-line"></i>
+<span>সেবাসমূহ</span>
+</a>
+<a href="#projects" class="flex items-center space-x-2 p-2 hover:bg-primary/5 rounded">
+<i class="ri-building-2-line"></i>
+<span>প্রজেক্টস</span>
+</a>
+<a href="#reviews" class="flex items-center space-x-2 p-2 hover:bg-primary/5 rounded">
+<i class="ri-star-line"></i>
+<span>রিভিউস</span>
+</a>
+<a href="#contact" class="flex items-center space-x-2 p-2 hover:bg-primary/5 rounded">
+<i class="ri-contacts-line"></i>
+<span>যোগাযোগ</span>
+</a>
+</nav>
+<div class="absolute bottom-8 left-0 w-full px-4">
+<div class="flex justify-center space-x-4">
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-full text-primary">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-full text-primary">
+<i class="ri-instagram-fill"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-full text-primary">
+<i class="ri-linkedin-fill"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-2 pb-3">
+<h2 class="text-xl font-bold">WOOD Communication</h2>
+<p class="text-sm opacity-90">Professional Exhibition Design Services</p>
+</div>
+<nav class="flex justify-between text-xs bg-white/10 rounded p-1">
+<a href="#about" class="px-2 py-1 rounded-full cursor-pointer hover:bg-white/20">About Us</a>
+<a href="#services" class="px-2 py-1 rounded-full cursor-pointer hover:bg-white/20">Services</a>
+<a href="#projects" class="px-2 py-1 rounded-full cursor-pointer hover:bg-white/20">Projects</a>
+<a href="#reviews" class="px-2 py-1 rounded-full cursor-pointer hover:bg-white/20">Reviews</a>
+<a href="#contact" class="px-2 py-1 rounded-full cursor-pointer hover:bg-white/20">Contact</a>
+</nav>
+</header>
+<!-- Main Content with proper spacing from fixed header -->
+<main class="pt-[130px]">
+<!-- Gallery Section -->
+<section class="px-4 py-5" id="gallery">
+<h2 class="text-lg font-bold mb-3">Exhibition Gallery</h2>
+<div class="grid grid-cols-3 gap-2">
+<div class="aspect-square bg-gray-100 rounded shadow-md overflow-hidden cursor-pointer gallery-item">
+<img src="https://readdy.ai/api/search-image?query=professional%20expo%20stall%20design%2C%20corporate%20exhibition%20booth%2C%20modern%20trade%20fair%20display%2C%20high%20quality%20render&width=200&height=200&seq=1&orientation=squarish" alt="স্টল ডিজাইন" class="w-full h-full object-cover">
+</div>
+<div class="aspect-square bg-gray-100 rounded shadow-md overflow-hidden cursor-pointer gallery-item">
+<img src="https://readdy.ai/api/search-image?query=creative%20exhibition%20booth%20design%2C%20corporate%20display%20stand%2C%20modern%20trade%20show%20stall%2C%20high%20quality%20render&width=200&height=200&seq=2&orientation=squarish" alt="স্টল ডিজাইন" class="w-full h-full object-cover">
+</div>
+<div class="aspect-square bg-gray-100 rounded shadow-md overflow-hidden cursor-pointer gallery-item">
+<img src="https://readdy.ai/api/search-image?query=innovative%20trade%20fair%20booth%2C%20corporate%20exhibition%20design%2C%20modern%20display%20stand%2C%20high%20quality%20render&width=200&height=200&seq=3&orientation=squarish" alt="স্টল ডিজাইন" class="w-full h-full object-cover">
+</div>
+<div class="aspect-square bg-gray-100 rounded shadow-md overflow-hidden cursor-pointer gallery-item">
+<img src="https://readdy.ai/api/search-image?query=elegant%20expo%20booth%20design%2C%20corporate%20exhibition%20stand%2C%20modern%20trade%20fair%20display%2C%20high%20quality%20render&width=200&height=200&seq=4&orientation=squarish" alt="স্টল ডিজাইন" class="w-full h-full object-cover">
+</div>
+<div class="aspect-square bg-gray-100 rounded shadow-md overflow-hidden cursor-pointer gallery-item">
+<img src="https://readdy.ai/api/search-image?query=premium%20trade%20show%20booth%2C%20corporate%20exhibition%20design%2C%20modern%20display%20stand%2C%20high%20quality%20render&width=200&height=200&seq=5&orientation=squarish" alt="স্টল ডিজাইন" class="w-full h-full object-cover">
+</div>
+<div class="aspect-square bg-gray-100 rounded shadow-md overflow-hidden cursor-pointer gallery-item">
+<img src="https://readdy.ai/api/search-image?query=luxury%20exhibition%20stall%20design%2C%20corporate%20trade%20fair%20booth%2C%20modern%20display%20stand%2C%20high%20quality%20render&width=200&height=200&seq=6&orientation=squarish" alt="স্টল ডিজাইন" class="w-full h-full object-cover">
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="px-4 py-5 bg-white" id="about">
+<h2 class="text-lg font-bold mb-3">About Us</h2>
+<p class="text-sm mb-3">
+WOOD Communication is a leading design company specializing in expo stall and exhibition stand design. We help elevate your brand presence. With years of experience and professionalism, we turn your vision into reality.
+</p>
+<div class="mb-4">
+<h3 class="text-base font-medium mb-2">আমাদের অর্জনসমূহ</h3>
+<p class="text-sm">
+আমরা গর্বিত যে আমরা এই শিল্পে অগ্রগণ্য। ২০২৩ সালে আমরা স্টল ডিজাইন এবং নির্মাণে উৎকর্ষতার জন্য ১৪টি পুরস্কার জিতেছি।
+</p>
+<div class="flex justify-between mt-2 text-xs">
+<div class="flex items-center">
+<img src="https://readdy.ai/api/search-image?query=golden%20trophy%20award%20ceremony%2C%20professional%20business%20achievement%2C%20elegant%20design%2C%20isolated%20on%20white%20background%2C%20high%20quality%20render&width=80&height=80&seq=2&orientation=squarish" alt="Award 2023" class="w-16 h-16 object-cover rounded mr-2">
+<div>
+<p class="font-medium">এই বছর পুরস্কার:</p>
+<p>১৭</p>
+</div>
+</div>
+<div class="flex items-center">
+<img src="https://readdy.ai/api/search-image?query=multiple%20golden%20trophies%20collection%2C%20professional%20business%20achievements%2C%20elegant%20design%2C%20isolated%20on%20white%20background%2C%20high%20quality%20render&width=80&height=80&seq=3&orientation=squarish" alt="Total Awards" class="w-16 h-16 object-cover rounded mr-2">
+<div>
+<p class="font-medium">এখন পর্যন্ত:</p>
+<p>১৭৫</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="px-4 py-5" id="services">
+<h2 class="text-lg font-bold mb-3">আমাদের সেবাসমূহ</h2>
+<div class="space-y-3">
+<div class="bg-white p-4 rounded shadow-sm">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-3">
+<i class="ri-layout-4-line text-primary"></i>
+</div>
+<div>
+<h3 class="font-medium">এক্সপো স্টল ডিজাইন</h3>
+<p class="text-sm text-gray-600">আকর্ষণীয় এবং ফাংশনাল এক্সপো স্টল ডিজাইন যা আপনার ব্র্যান্ডকে প্রতিফলিত করে</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-4 rounded shadow-sm">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-3">
+<i class="ri-building-line text-primary"></i>
+</div>
+<div>
+<h3 class="font-medium">প্রদর্শনী স্ট্যান্ড নির্মাণ</h3>
+<p class="text-sm text-gray-600">উচ্চ মানের উপকরণ ব্যবহার করে দ্রুত ও নির্ভুল নির্মাণ সেবা</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-4 rounded shadow-sm">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-3">
+<i class="ri-paint-brush-line text-primary"></i>
+</div>
+<div>
+<h3 class="font-medium">গ্রাফিক ডিজাইন</h3>
+<p class="text-sm text-gray-600">আপনার স্টলের জন্য আকর্ষণীয় গ্রাফিক্স এবং ভিজ্যুয়াল এলিমেন্ট</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section class="px-4 py-5 bg-white" id="projects">
+<h2 class="text-lg font-bold mb-3">Our Projects</h2>
+<div class="space-y-3">
+<a href="/projects/itc-box-stall" class="block bg-gray-50 p-3 rounded hover:bg-gray-100 transition-colors" data-project-link>
+<div class="flex items-center">
+<div class="w-6 h-6 flex items-center justify-center bg-primary text-white rounded-full mr-2 text-xs">১</div>
+<h3 class="font-medium">ITC বক্স স্টল, ঢাকা ২০২৫</h3>
+</div>
+<p class="text-sm text-gray-600 mt-1 pl-8">ইন্টারন্যাশনাল ট্রেড সেন্টারের জন্য ডিজাইন করা মডার্ন বক্স স্টাইল এক্সিবিশন স্টল</p>
+</a>
+<div class="bg-gray-50 p-3 rounded">
+<div class="flex items-center">
+<div class="w-6 h-6 flex items-center justify-center bg-primary text-white rounded-full mr-2 text-xs">২</div>
+<h3 class="font-medium">জুট ফেয়ার ২০২৫, ঢাকা</h3>
+</div>
+<p class="text-sm text-gray-600 mt-1 pl-8">বাংলাদেশ জুট মিলস করপোরেশনের জন্য ডিজাইন করা ইকো-ফ্রেন্ডলি স্টল</p>
+</div>
+<div class="bg-gray-50 p-3 rounded">
+<div class="flex items-center">
+<div class="w-6 h-6 flex items-center justify-center bg-primary text-white rounded-full mr-2 text-xs">৩</div>
+<h3 class="font-medium">ফার্নিচার ডিজাইন, ঢাকা ২০২৪</h3>
+</div>
+<p class="text-sm text-gray-600 mt-1 pl-8">ন্যাশনাল ফার্নিচার এক্সপোতে প্রদর্শিত কাস্টম ডিজাইন স্টল</p>
+</div>
+<div class="bg-gray-50 p-3 rounded">
+<div class="flex items-center">
+<div class="w-6 h-6 flex items-center justify-center bg-primary text-white rounded-full mr-2 text-xs">৪</div>
+<h3 class="font-medium">কর্পোরেট বুথ, ঢাকা ২০২৪</h3>
+</div>
+<p class="text-sm text-gray-600 mt-1 pl-8">ঢাকা ইন্টারন্যাশনাল ট্রেড ফেয়ারে প্রদর্শিত প্রিমিয়াম কর্পোরেট বুথ</p>
+</div>
+</div>
+<div class="mt-4 text-center">
+<p class="text-sm text-gray-500 italic">ঢাকা ইন্টারন্যাশনাল ট্রেড ফেয়ার</p>
+</div>
+</section>
+<!-- Reviews Section -->
+<section class="px-4 py-5" id="reviews">
+<h2 class="text-lg font-bold mb-3">ক্লায়েন্ট রিভিউস</h2>
+<div class="space-y-3">
+<div class="bg-white p-4 rounded shadow-sm">
+<div class="flex text-yellow-400 mb-2">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+<p class="text-sm mb-2">"WOOD Communication আমাদের প্রত্যাশা ছাড়িয়ে গেছে। আমাদের স্টল ছিল মেলায় সবচেয়ে আকর্ষণীয় এবং আমরা অনেক নতুন ক্লায়েন্ট পেয়েছি।"</p>
+<div class="flex items-center">
+<div class="w-8 h-8 bg-gray-200 rounded-full mr-2"></div>
+<div>
+<p class="text-sm font-medium">আনিসুল হক</p>
+<p class="text-xs text-gray-500">ব্যবস্থাপনা পরিচালক, গ্রীন টেক্সটাইলস</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-4 rounded shadow-sm">
+<div class="flex text-yellow-400 mb-2">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+<p class="text-sm mb-2">"দ্রুত সেবা এবং অসাধারণ ডিজাইন। আমরা আবারও তাদের সাথে কাজ করার জন্য অপেক্ষা করছি। অত্যন্ত প্রফেশনাল টিম।"</p>
+<div class="flex items-center">
+<div class="w-8 h-8 bg-gray-200 rounded-full mr-2"></div>
+<div>
+<p class="text-sm font-medium">নাজমুল হাসান</p>
+<p class="text-xs text-gray-500">মার্কেটিং ম্যানেজার, ইস্টার্ন ফুডস</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Clients Section -->
+<section class="px-4 py-5 bg-white">
+<h2 class="text-lg font-bold mb-3">আমাদের ক্লায়েন্টস</h2>
+<div class="relative overflow-hidden h-16">
+<div class="flex animate-scroll absolute">
+<div class="flex-none w-24 mx-4">
+<img src="https://readdy.ai/api/search-image?query=modern%20corporate%20logo%20design%2C%20minimalist%20business%20emblem%201%2C%20professional%20brand%20mark%2C%20isolated%20on%20white%20background&width=96&height=64&seq=4&orientation=landscape" alt="Client 1" class="h-16 object-contain">
+</div>
+<div class="flex-none w-24 mx-4">
+<img src="https://readdy.ai/api/search-image?query=modern%20corporate%20logo%20design%2C%20minimalist%20business%20emblem%202%2C%20professional%20brand%20mark%2C%20isolated%20on%20white%20background&width=96&height=64&seq=5&orientation=landscape" alt="Client 2" class="h-16 object-contain">
+</div>
+<div class="flex-none w-24 mx-4">
+<img src="https://readdy.ai/api/search-image?query=modern%20corporate%20logo%20design%2C%20minimalist%20business%20emblem%203%2C%20professional%20brand%20mark%2C%20isolated%20on%20white%20background&width=96&height=64&seq=6&orientation=landscape" alt="Client 3" class="h-16 object-contain">
+</div>
+<div class="flex-none w-24 mx-4">
+<img src="https://readdy.ai/api/search-image?query=modern%20corporate%20logo%20design%2C%20minimalist%20business%20emblem%204%2C%20professional%20brand%20mark%2C%20isolated%20on%20white%20background&width=96&height=64&seq=7&orientation=landscape" alt="Client 4" class="h-16 object-contain">
+</div>
+<!-- Duplicate logos for seamless scrolling -->
+<div class="flex-none w-24 mx-4">
+<img src="https://readdy.ai/api/search-image?query=modern%20corporate%20logo%20design%2C%20minimalist%20business%20emblem%201%2C%20professional%20brand%20mark%2C%20isolated%20on%20white%20background&width=96&height=64&seq=4&orientation=landscape" alt="Client 1" class="h-16 object-contain">
+</div>
+<div class="flex-none w-24 mx-4">
+<img src="https://readdy.ai/api/search-image?query=modern%20corporate%20logo%20design%2C%20minimalist%20business%20emblem%202%2C%20professional%20brand%20mark%2C%20isolated%20on%20white%20background&width=96&height=64&seq=5&orientation=landscape" alt="Client 2" class="h-16 object-contain">
+</div>
+<div class="flex-none w-24 mx-4">
+<img src="https://readdy.ai/api/search-image?query=modern%20corporate%20logo%20design%2C%20minimalist%20business%20emblem%203%2C%20professional%20brand%20mark%2C%20isolated%20on%20white%20background&width=96&height=64&seq=6&orientation=landscape" alt="Client 3" class="h-16 object-contain">
+</div>
+<div class="flex-none w-24 mx-4">
+<img src="https://readdy.ai/api/search-image?query=modern%20corporate%20logo%20design%2C%20minimalist%20business%20emblem%204%2C%20professional%20brand%20mark%2C%20isolated%20on%20white%20background&width=96&height=64&seq=7&orientation=landscape" alt="Client 4" class="h-16 object-contain">
+</div>
+</div>
+</div>
+<style>
+@keyframes scroll {
+0% { transform: translateX(0); }
+100% { transform: translateX(-100%); }
+}
+.animate-scroll {
+animation: scroll 20s linear infinite;
+}
+</style>
+</section>
+<!-- Contact Section -->
+<section class="px-4 py-5" id="contact">
+<h2 class="text-lg font-bold mb-3">যোগাযোগ করুন</h2>
+<div class="space-y-3">
+<a href="tel:+8801234567890" class="flex items-center bg-white p-3 rounded">
+<div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-full mr-3">
+<i class="ri-phone-line text-primary"></i>
+</div>
+<p class="text-sm">+৮৮০ ১২৩৪৫ ৬৭৮৯০</p>
+</a>
+<a href="https://wa.me/8801234567890" class="flex items-center bg-white p-3 rounded">
+<div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-full mr-3">
+<i class="ri-whatsapp-line text-primary"></i>
+</div>
+<p class="text-sm">+৮৮০ ১২৩৪৫ ৬৭৮৯০</p>
+</a>
+<div class="flex items-center bg-white p-3 rounded">
+<div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-full mr-3">
+<i class="ri-mail-line text-primary"></i>
+</div>
+<p class="text-sm">wood@gmail.com</p>
+</div>
+<div class="bg-white p-3 rounded">
+<div class="w-full h-48 rounded overflow-hidden">
+<img src="https://public.readdy.ai/gen_page/map_placeholder_1280x720.png" alt="Location Map" class="w-full h-full object-cover">
+</div>
+<a href="https://goo.gl/maps/your-location" target="_blank" class="w-full bg-primary text-white py-2 mt-2 rounded-button font-medium flex items-center justify-center">
+<i class="ri-map-pin-line mr-1"></i> লোকেশন দেখুন
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer/Tab Bar -->
+<footer class="fixed bottom-0 w-full bg-white border-t border-gray-200 py-2 px-4">
+<div class="grid grid-cols-5 gap-1">
+<!-- Footer content remains the same -->
+</div>
+</footer>
 
-  <!-- Header -->
-  <header class="text-center py-16 px-4 bg-gradient-to-b from-red-800 to-blue-950">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4">WOOD Communication</h1>
-    <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto">
-      Leading design company specializing in expo stall and exhibition stand design.
-    </p>
-  </header>
-
-  <!-- Exhibition Gallery -->
-  <section class="py-12 px-6 bg-blue-900">
-    <h2 class="text-3xl font-semibold text-center mb-8">Exhibition Gallery</h2>
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 max-w-6xl mx-auto">
-      <!-- Placeholder images -->
-      <div class="aspect-square overflow-hidden rounded-md shadow-md transform transition-transform duration-300 hover:scale-105">
-        <img src="https://readdy.ai/api/search-image?query=exhibition%20stall%20design&width=200&height=200&seq=1 " alt="Stall Design" class="w-full h-full object-cover"/>
-      </div>
-      <div class="aspect-square overflow-hidden rounded-md shadow-md transform transition-transform duration-300 hover:scale-105">
-        <img src="https://readdy.ai/api/search-image?query=exhibition%20stall%20design&width=200&height=200&seq=2 " alt="Stall Design" class="w-full h-full object-cover"/>
-      </div>
-      <div class="aspect-square overflow-hidden rounded-md shadow-md transform transition-transform duration-300 hover:scale-105">
-        <img src="https://readdy.ai/api/search-image?query=exhibition%20stall%20design&width=200&height=200&seq=3 " alt="Stall Design" class="w-full h-full object-cover"/>
-      </div>
-      <div class="aspect-square overflow-hidden rounded-md shadow-md transform transition-transform duration-300 hover:scale-105">
-        <img src="https://readdy.ai/api/search-image?query=exhibition%20stall%20design&width=200&height=200&seq=4 " alt="Stall Design" class="w-full h-full object-cover"/>
-      </div>
-      <div class="aspect-square overflow-hidden rounded-md shadow-md transform transition-transform duration-300 hover:scale-105">
-        <img src="https://readdy.ai/api/search-image?query=exhibition%20stall%20design&width=200&height=200&seq=5 " alt="Stall Design" class="w-full h-full object-cover"/>
-      </div>
-      <div class="aspect-square overflow-hidden rounded-md shadow-md transform transition-transform duration-300 hover:scale-105">
-        <img src="https://readdy.ai/api/search-image?query=exhibition%20stall%20design&width=200&height=200&seq=6 " alt="Stall Design" class="w-full h-full object-cover"/>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Us -->
-  <section class="py-16 px-6 bg-blue-950">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-semibold mb-6">About Us</h2>
-      <p class="text-gray-300 text-lg mb-6">
-        WOOD Communication is a leading design company specializing in expo stall and exhibition stand design. We help elevate your brand presence. With years of experience and professionalism, we turn your vision into reality.
-      </p>
-      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-        <div class="text-center">
-          <p class="text-4xl font-bold text-red-500">17</p>
-          <p class="text-sm text-gray-400">Awards This Year</p>
-        </div>
-        <div class="text-center">
-          <p class="text-4xl font-bold text-red-500">175</p>
-          <p class="text-sm text-gray-400">Total Achievements</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section class="py-16 px-6 bg-blue-900">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl font-semibold text-center mb-8">Our Services</h2>
-      <div class="space-y-6">
-        <div class="border-l-4 border-red-500 pl-4">
-          <h3 class="text-xl font-medium">Expo Stall Design</h3>
-          <p class="text-gray-400">Attractive and functional expo stall designs that reflect your brand identity.</p>
-        </div>
-        <div class="border-l-4 border-red-500 pl-4">
-          <h3 class="text-xl font-medium">Exhibition Stand Construction</h3>
-          <p class="text-gray-400">Fast and accurate construction services using high-quality materials.</p>
-        </div>
-        <div class="border-l-4 border-red-500 pl-4">
-          <h3 class="text-xl font-medium">Graphic Design</h3>
-          <p class="text-gray-400">Engaging graphics and visual elements for your stall display.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section class="py-16 px-6 bg-blue-950">
-    <h2 class="text-3xl font-semibold text-center mb-10">Our Projects</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-      <div class="bg-blue-800 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-        <h3 class="text-xl font-semibold mb-2">ITC Box Stall, Dhaka 2025</h3>
-        <p class="text-gray-400">Modern box-style exhibition stall designed for International Trade Center.</p>
-      </div>
-      <div class="bg-blue-800 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-        <h3 class="text-xl font-semibold mb-2">Jute Fair 2025, Dhaka</h3>
-        <p class="text-gray-400">Eco-friendly stall designed for Bangladesh Jute Mills Corporation.</p>
-      </div>
-      <div class="bg-blue-800 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-        <h3 class="text-xl font-semibold mb-2">Furniture Design, Dhaka 2024</h3>
-        <p class="text-gray-400">Custom-designed stall displayed at National Furniture Expo.</p>
-      </div>
-      <div class="bg-blue-800 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-        <h3 class="text-xl font-semibold mb-2">Corporate Booth, Dhaka 2024</h3>
-        <p class="text-gray-400">Premium corporate booth showcased at Dhaka International Trade Fair.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Client Reviews -->
-  <section class="py-16 px-6 bg-blue-900">
-    <h2 class="text-3xl font-semibold text-center mb-10">Client Reviews</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-      <div class="bg-blue-800 p-6 rounded-lg shadow-md">
-        <p class="italic text-gray-300 mb-4">"WOOD Communication exceeded our expectations. Our stall was the most attractive at the fair and we gained many new clients."</p>
-        <p class="font-semibold">Anisul Haque</p>
-        <p class="text-sm text-gray-400">Managing Director, Green Textiles</p>
-      </div>
-      <div class="bg-blue-800 p-6 rounded-lg shadow-md">
-        <p class="italic text-gray-300 mb-4">"Fast service and exceptional design. We are looking forward to working with them again. Extremely professional team."</p>
-        <p class="font-semibold">Nazmul Hasan</p>
-        <p class="text-sm text-gray-400">Marketing Manager, Eastern Foods</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Clients Carousel -->
-  <section class="py-12 px-4 bg-blue-950 overflow-hidden">
-    <h2 class="text-3xl font-semibold text-center mb-8">Our Clients</h2>
-    <div class="flex animate-scroll gap-12">
-      <!-- Placeholder client logos -->
-      <img src="https://readdy.ai/api/search-image?query=modern%20corporate%20logo&width=150&height=100&seq=1 " alt="Client Logo" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"/>
-      <img src="https://readdy.ai/api/search-image?query=modern%20corporate%20logo&width=150&height=100&seq=2 " alt="Client Logo" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"/>
-      <img src="https://readdy.ai/api/search-image?query=modern%20corporate%20logo&width=150&height=100&seq=3 " alt="Client Logo" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"/>
-      <img src="https://readdy.ai/api/search-image?query=modern%20corporate%20logo&width=150&height=100&seq=4 " alt="Client Logo" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"/>
-      <img src="https://readdy.ai/api/search-image?query=modern%20corporate%20logo&width=150&height=100&seq=5 " alt="Client Logo" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"/>
-      <img src="https://readdy.ai/api/search-image?query=modern%20corporate%20logo&width=150&height=100&seq=6 " alt="Client Logo" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"/>
-      <img src="https://readdy.ai/api/search-image?query=modern%20corporate%20logo&width=150&height=100&seq=7 " alt="Client Logo" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"/>
-      <img src="https://readdy.ai/api/search-image?query=modern%20corporate%20logo&width=150&height=100&seq=8 " alt="Client Logo" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"/>
-    </div>
-  </section>
-
-  <!-- Call to Action -->
-  <section class="py-16 bg-blue-950 text-center">
-    <h2 class="text-3xl font-bold mb-6">Ready to Showcase Your Brand?</h2>
-    <p class="text-gray-400 mb-8 max-w-xl mx-auto">
-      Let us create an unforgettable experience for your next event with a custom-designed exhibition stall or booth.
-    </p>
-    <a href="#" class="px-8 py-3 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105 inline-block">
-      Get in Touch
-    </a>
-  </section>
-
-  <!-- Footer -->
-  <footer class="text-center py-8 text-gray-500 text-sm border-t border-blue-800">
-    &copy; 2025 WOOD Communication. All rights reserved.
-  </footer>
-
+<!-- Designer Credit -->
+<div class="fixed bottom-16 w-full text-center py-2 bg-gradient-to-r from-primary/10 via-primary/20 to-primary/10">
+  <a href="https://example.com/skkhorrum" class="inline-block font-['Pacifico'] text-primary hover:text-secondary transition-colors">
+    Designed by SK Khorrum
+  </a>
+</div>
+<div class="grid grid-cols-5 gap-1">
+<a href="#" class="flex flex-col items-center cursor-pointer">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-home-5-line text-primary"></i>
+</div>
+<span class="text-[10px] mt-1">হোম</span>
+</a>
+<a href="#gallery" class="flex flex-col items-center cursor-pointer">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-gallery-line"></i>
+</div>
+<span class="text-[10px] mt-1">গ্যালারি</span>
+</a>
+<a href="#services" class="flex flex-col items-center cursor-pointer">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-service-line"></i>
+</div>
+<span class="text-[10px] mt-1">সেবা</span>
+</a>
+<a href="#projects" class="flex flex-col items-center cursor-pointer">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-building-2-line"></i>
+</div>
+<span class="text-[10px] mt-1">প্রজেক্টস</span>
+</a>
+<a href="#contact" class="flex flex-col items-center cursor-pointer">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-contacts-line"></i>
+</div>
+<span class="text-[10px] mt-1">যোগাযোগ</span>
+</a>
+</div>
+</footer>
+<!-- Modal for Gallery Images -->
+<div id="imageModal" class="fixed inset-0 bg-black/70 z-50 hidden flex items-center justify-center">
+<div class="w-[90%] bg-white rounded-lg overflow-hidden">
+<div class="relative">
+<img id="modalImage" src="" alt="Gallery Image" class="w-full aspect-square object-cover">
+<button id="closeModal" class="absolute top-2 right-2 w-8 h-8 bg-black/50 rounded-full text-white flex items-center justify-center cursor-pointer">
+<i class="ri-close-line"></i>
+</button>
+</div>
+<div class="flex justify-around p-3 border-t">
+<button id="shareBtn" class="flex items-center text-sm cursor-pointer">
+<i class="ri-share-line mr-1"></i> শেয়ার করুন
+</button>
+<button class="flex items-center text-sm cursor-pointer">
+<i class="ri-download-line mr-1"></i> ডাউনলোড করুন
+</button>
+<button id="closeModalBtn" class="flex items-center text-sm cursor-pointer">
+<i class="ri-close-line mr-1"></i> বন্ধ করুন
+</button>
+</div>
+<div id="shareMenu" class="fixed inset-0 bg-black/70 z-[60] hidden">
+<div class="absolute bottom-0 left-0 w-full bg-white rounded-t-xl">
+<div class="p-4">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-lg font-medium">শেয়ার করুন</h3>
+<button id="closeShareMenu" class="w-8 h-8 flex items-center justify-center">
+<i class="ri-close-line text-xl"></i>
+</button>
+</div>
+<div class="grid grid-cols-4 gap-4 mb-6">
+<button class="flex flex-col items-center" data-share="facebook">
+<div class="w-12 h-12 rounded-full bg-[#1877F2] text-white flex items-center justify-center mb-1">
+<i class="ri-facebook-fill text-xl"></i>
+</div>
+<span class="text-xs">ফেসবুক</span>
+</button>
+<button class="flex flex-col items-center" data-share="whatsapp">
+<div class="w-12 h-12 rounded-full bg-[#25D366] text-white flex items-center justify-center mb-1">
+<i class="ri-whatsapp-fill text-xl"></i>
+</div>
+<span class="text-xs">হোয়াটসঅ্যাপ</span>
+</button>
+<button class="flex flex-col items-center" data-share="twitter">
+<div class="w-12 h-12 rounded-full bg-[#1DA1F2] text-white flex items-center justify-center mb-1">
+<i class="ri-twitter-fill text-xl"></i>
+</div>
+<span class="text-xs">টুইটার</span>
+</button>
+<button class="flex flex-col items-center" data-share="email">
+<div class="w-12 h-12 rounded-full bg-[#EA4335] text-white flex items-center justify-center mb-1">
+<i class="ri-mail-fill text-xl"></i>
+</div>
+<span class="text-xs">ইমেইল</span>
+</button>
+</div>
+<button id="copyLink" class="w-full flex items-center justify-center bg-gray-100 text-sm rounded-button py-3">
+<i class="ri-link mr-2"></i> লিংক কপি করুন
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const shareBtn = document.getElementById('shareBtn');
+const shareMenu = document.getElementById('shareMenu');
+const closeShareMenu = document.getElementById('closeShareMenu');
+const copyLinkBtn = document.getElementById('copyLink');
+function showShareMenu() {
+shareMenu.classList.remove('hidden');
+document.body.style.overflow = 'hidden';
+}
+function hideShareMenu() {
+shareMenu.classList.add('hidden');
+document.body.style.overflow = 'auto';
+}
+shareBtn.addEventListener('click', showShareMenu);
+closeShareMenu.addEventListener('click', hideShareMenu);
+shareMenu.addEventListener('click', (e) => {
+if (e.target === shareMenu) {
+hideShareMenu();
+}
+});
+document.querySelectorAll('[data-share]').forEach(button => {
+button.addEventListener('click', function() {
+const platform = this.getAttribute('data-share');
+const url = window.location.href;
+const text = 'Check out this amazing expo stall design!';
+const shareUrls = {
+facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
+twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`,
+whatsapp: `https://wa.me/?text=${encodeURIComponent(text + ' ' + url)}`,
+email: `mailto:?subject=${encodeURIComponent(text)}&body=${encodeURIComponent(url)}`
+};
+if (shareUrls[platform]) {
+window.open(shareUrls[platform], '_blank');
+}
+hideShareMenu();
+});
+});
+copyLinkBtn.addEventListener('click', async () => {
+try {
+await navigator.clipboard.writeText(window.location.href);
+copyLinkBtn.innerHTML = '<i class="ri-check-line mr-2"></i> কপি করা হয়েছে';
+setTimeout(() => {
+copyLinkBtn.innerHTML = '<i class="ri-link mr-2"></i> লিংক কপি করুন';
+hideShareMenu();
+}, 2000);
+} catch (err) {
+console.error('Failed to copy link:', err);
+}
+});
+// Project links functionality
+document.querySelectorAll('[data-project-link]').forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
+const projectUrl = this.getAttribute('href');
+// You can customize this to open in new tab or handle differently
+window.location.href = projectUrl;
+});
+});
+const menuBtn = document.getElementById('menuBtn');
+const sidebar = document.getElementById('sidebar');
+const sidebarOverlay = document.getElementById('sidebarOverlay');
+const closeSidebarBtn = document.getElementById('closeSidebarBtn');
+function openSidebar() {
+sidebar.classList.remove('-translate-x-full');
+sidebarOverlay.classList.remove('hidden');
+document.body.style.overflow = 'hidden';
+}
+function closeSidebar() {
+sidebar.classList.add('-translate-x-full');
+sidebarOverlay.classList.add('hidden');
+document.body.style.overflow = 'auto';
+}
+menuBtn.addEventListener('click', openSidebar);
+closeSidebarBtn.addEventListener('click', closeSidebar);
+sidebarOverlay.addEventListener('click', closeSidebar);
+document.querySelectorAll('#sidebar a').forEach(link => {
+link.addEventListener('click', closeSidebar);
+});
+const galleryItems = document.querySelectorAll('.gallery-item');
+const imageModal = document.getElementById('imageModal');
+const modalImage = document.getElementById('modalImage');
+const closeModal = document.getElementById('closeModal');
+const closeModalBtn = document.getElementById('closeModalBtn');
+galleryItems.forEach(item => {
+item.addEventListener('click', function() {
+const imgSrc = this.querySelector('img').src;
+modalImage.src = imgSrc;
+imageModal.classList.remove('hidden');
+document.body.style.overflow = 'hidden';
+});
+});
+function hideModal() {
+imageModal.classList.add('hidden');
+document.body.style.overflow = 'auto';
+}
+closeModal.addEventListener('click', hideModal);
+closeModalBtn.addEventListener('click', hideModal);
+imageModal.addEventListener('click', function(e) {
+if (e.target === imageModal) {
+hideModal();
+}
+});
+});
+</script>
 </body>
-</html>
+  </html>
